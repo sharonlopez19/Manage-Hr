@@ -1,0 +1,50 @@
+<!-- menu.component.html -->
+<aside class="sidebar" [class.sidebar-collapsed]="isCollapsed">
+    <div class="logo-container">
+      <img src="https://i.postimg.cc/BnHG09W1/logo.png" alt="Logo" class="img-fluid">
+    </div>
+  
+    <nav class="nav">
+      <div class="nav-section">
+        <a class="nav-link " routerLink="/directorio" routerLinkActive="active">
+          <i class="fas fa-address-book"></i>
+          <span>Directorio</span>
+        </a>
+        <a class="nav-link" routerLink="/vacantes" routerLinkActive="active">
+          <i class="fas fa-briefcase"></i>
+          <span>Vacantes</span>
+        </a>
+        <a class="nav-link" routerLink="/vacaciones" routerLinkActive="active">
+          <i class="fas fa-suitcase"></i>
+          <span>Vacaciones</span>
+        </a>
+        <a class="nav-link" routerLink="/incapacidades" routerLinkActive="active">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <span>Incapacidades</span>
+        </a>
+        <a class="nav-link" routerLink="/horas-extra" routerLinkActive="active">
+          <i class="fas fa-calendar-plus"></i>
+          <span>Horas extra</span>
+        </a>
+      </div>
+  
+      <div class="nav-section mt-auto"> 
+        <a class="nav-link" routerLink="/settings" routerLinkActive="active">
+          <i class="fas fa-cog"></i>
+          <span>Configuración</span>
+        </a>
+        <a class="nav-link logout" (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Cerrar Sesión</span>
+        </a>
+        <br>
+        <div class="user-link bottom-section">
+          <i class="fas fa-user"></i>
+          <div class="user-info">
+            <p class="name">Juan Joven</p>
+            <p class="email">Administrador</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </aside>
