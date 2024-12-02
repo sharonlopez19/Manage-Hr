@@ -29,4 +29,6 @@ export class LoginComponent {
       .then(() => console.log('Navegación exitosa'))
       .catch(err => console.error('Error en navegación:', err));
   }
+
+  
 }
