@@ -1,0 +1,146 @@
+/* Estilo para el contenedor de la lista de vacantes */
+#vacante-lista {
+    width: 70%; /* Asegura que la lista ocupe el 70% */
+    padding-right: 20px; /* Espaciado a la derecha */
+    overflow-y: auto; /* Barra de desplazamiento a la derecha */
+    background-color: #f9f9f9;
+    height: 100vh; /* Asegura que la lista ocupe toda la altura disponible */
+    margin-right: 0; /* Elimina margen que podría empujar la barra de desplazamiento */
+}
+
+/* Estilo para cada vacante */
+.vacante {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espaciado entre vacantes */
+    padding-bottom: 15px; /* Espaciado inferior */
+    border-bottom: 1px solid #ddd; /* Borde entre vacantes */
+}
+
+/* Estilo para la foto de la vacante */
+.vacante-foto img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Foto redonda */
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+/* Estilo para la información de la vacante */
+.vacante-info {
+    margin-left: 15px; /* Espacio entre la foto y la información */
+    color: rgb(250, 240, 240); /* Cambié el color a más oscuro para mayor contraste */
+}
+
+/* Estilo para el nombre de la vacante */
+.vacante-nombre {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ced128;
+    margin: 0;
+}
+
+/* Estilo para el salario de la vacante */
+.vacante-salario {
+    font-size: 16px;
+    color: #28a745;
+    margin: 5px 0 0 0;
+}
+
+/* Estilo para el contenedor de los detalles de la vacante */
+#vacante-detalles {
+    position: fixed; /* Hace que el contenedor de detalles quede fijo */
+    top: 100px; /* Ajusta la distancia desde la parte superior para que no se superponga con el menú lateral */
+    right: 20px; /* Alinea el contenedor a la derecha */
+    width: 25%; /* Toma el 25% del ancho de la pantalla */
+    padding: 20px;
+    background-color: #9e2020;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agrega sombra para resaltar el cuadro */
+    z-index: 100; /* Asegura que el cuadro quede encima de otros elementos */
+}
+
+/* Estilo para el título de los detalles */
+.detalles-titulo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d42626;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la descripción de los detalles */
+.detalles-descripcion {
+    font-size: 16px;
+    color: #21ce11;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Contenedor de la lista de vacantes */
+.container-fluid {
+    display: flex;
+    height: 100vh; /* Altura completa de la pantalla */
+    padding: 0;
+    margin-top: 0%;
+}
+
+/* Sidebar */
+app-menu {
+    position: fixed; /* Fija el sidebar en el lado izquierdo */
+    width: 15%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+/* Contenedor principal de las vacantes */
+.contenido-principal {
+    margin-left: 15%; /* Deja espacio para el sidebar */
+    width: 85%; /* El contenido ocupa el 85% */
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Para que la lista y detalles estén lado a lado */
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+/* Ajustes en la lista de vacantes */
+.lista-vacantes {
+    width: 70%; /* Toma el 70% del contenedor principal */
+    padding-right: 20px;
+    overflow-y: auto; /* Permite la barra de desplazamiento en la parte derecha */
+    max-height: 100vh; /* Limita la altura para que no se desborde */
+    margin-right: 10px; /* Alinea bien la lista con un pequeño margen a la derecha */
+}
+
+/* Detalles de la vacante */
+.detalles-vacante {
+    width: 30%; /* Toma el 30% del contenedor principal */
+    padding: 20px;
+    border: 1px solid #dddddd00;
+    background: linear-gradient(90deg, #007bff, #42a5f5);
+    border-radius: 5px;
+}
+
+/* Aseguramos que la caja de detalles se mantenga fija en la página */
+.detalles-vacante-fixed {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.vacante-foto img {
+    width: 70px; /* Cambié el tamaño de la imagen a 80px */
+    height: 70px; /* Ajusté la altura para mantener la proporción */
+    border-radius: 50%; /* Foto redonda */
+    object-fit: cover;
+    border: 1px solid #ffffff;
+}

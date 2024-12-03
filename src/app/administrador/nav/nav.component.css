@@ -1,0 +1,26 @@
+.navbar-custom {
+    margin-left: 13%;
+    position: fixed;
+    height: 6%;
+    width: 100%;
+    background-color: #202940 !important;  /* Color personalizado */
+}
+
+.search-bar input {
+    width: 300px;
+    background-color: #ffffff;  /* Fondo blanco */
+    color: #333333;  /* Color de texto oscuro para contraste */
+    border: 1px solid #ccc;  /* Borde gris claro */
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.notification-button {
+    font-size: 24px;
+    color: rgb(34, 116, 189);
+}
+
+/* Asegurarse de que el icono se vea correctamente */
+.notification-button i {
+    font-size: 28px;  /* Asegura que el tamaño del icono sea lo suficientemente grande */
+}
