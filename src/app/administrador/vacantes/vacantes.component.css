@@ -9,13 +9,39 @@
 }
 
 /* Estilo para cada vacante */
+/* Estilo base de la vacante */
+/* Estilo base de la vacante */
 .vacante {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Espaciado entre vacantes */
-    padding-bottom: 15px; /* Espaciado inferior */
-    border-bottom: 1px solid #ddd; /* Borde entre vacantes */
+    margin-bottom: 10px; /* Espaciado entre vacantes */
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid white; /* Borde inicial blanco para todas las direcciones */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #181a22; /* Fondo de cada vacante */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animación de borde */
 }
+
+/* Estilo cuando el ratón está encima de la vacante */
+.vacante:hover {
+    border-color: #007bff; /* Borde azul al pasar el ratón */
+}
+
+/* Estilo cuando la vacante está enfocada (al hacer clic) */
+.vacante:focus {
+    border-color: #007bff; /* Borde azul al hacer clic */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra azul */
+    outline: none; /* Quita el borde por defecto de focus */
+}
+
+/* Asegura que el borde inferior también se cambie al azul al enfocarse */
+.vacante:focus, .vacante:hover {
+    border-top: 1px solid #007bff;    /* Asegura que el borde superior también sea azul */
+    border-right: 1px solid #007bff;  /* Borde derecho también azul */
+    border-bottom: 1px solid #007bff; /* Borde inferior también azul */
+    border-left: 1px solid #007bff;   /* Borde izquierdo también azul */
+}
+
 
 /* Estilo para la foto de la vacante */
 .vacante-foto img {
@@ -47,26 +73,21 @@
     margin: 5px 0 0 0;
 }
 
-/* Estilo para el contenedor de los detalles de la vacante */
-#vacante-detalles {
-    position: fixed; /* Hace que el contenedor de detalles quede fijo */
-    top: 100px; /* Ajusta la distancia desde la parte superior para que no se superponga con el menú lateral */
-    right: 20px; /* Alinea el contenedor a la derecha */
-    width: 25%; /* Toma el 25% del ancho de la pantalla */
-    padding: 20px;
-    background-color: #9e2020;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agrega sombra para resaltar el cuadro */
-    z-index: 100; /* Asegura que el cuadro quede encima de otros elementos */
-}
+
 
 /* Estilo para el título de los detalles */
 .detalles-titulo {
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
-    color: #d42626;
+    color: #ffffff;
     margin-bottom: 10px;
+    background-color: #1e2131;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 50px;
 }
 
 /* Estilo para la descripción de los detalles */
@@ -83,6 +104,7 @@
     height: 100vh; /* Altura completa de la pantalla */
     padding: 0;
     margin-top: 0%;
+    width: 95%;
 }
 
 /* Sidebar */
@@ -103,7 +125,8 @@ app-menu {
     display: flex;
     flex-direction: row; /* Para que la lista y detalles estén lado a lado */
     justify-content: space-between;
-    margin-top: 4%;
+    margin-top: 10%;
+    
 }
 
 /* Ajustes en la lista de vacantes */
@@ -113,7 +136,9 @@ app-menu {
     overflow-y: auto; /* Permite la barra de desplazamiento en la parte derecha */
     max-height: 100vh; /* Limita la altura para que no se desborde */
     margin-right: 10px; /* Alinea bien la lista con un pequeño margen a la derecha */
+    
 }
+
 
 /* Detalles de la vacante */
 .detalles-vacante {
@@ -122,6 +147,33 @@ app-menu {
     border: 1px solid #dddddd00;
     background: linear-gradient(90deg, #007bff, #42a5f5);
     border-radius: 5px;
+}
+
+.detalles-vacante li{
+    background-color: #121a24;
+    color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    
+    
+}
+
+.detalles-vacante p{
+    background-color: #121a24;
+    color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.detalles-vacante h4{
+    background-color: #ffffff;
+    color: #121730;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 20px;
 }
 
 /* Aseguramos que la caja de detalles se mantenga fija en la página */
@@ -143,4 +195,63 @@ app-menu {
     border-radius: 50%; /* Foto redonda */
     object-fit: cover;
     border: 1px solid #ffffff;
+    margin-left: 10px;
 }
+
+/* Estilo para los íconos de acciones */
+.acciones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+    
+    
+}
+
+.acciones i {
+    font-size: 25px; /* Tamaño del ícono */
+    cursor: pointer; /* Cambia el cursor para indicar interactividad */
+
+    
+}
+
+
+
+
+
+/* Webkit Browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f0f0f000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #007bff00, #42a4f500);
+    border-radius: 6px;
+    border: 2px solid #f0f0f000;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #e0e0e000;
+    border-radius: 6px;
+  }
+  
+  /* Firefox */
+  html {
+    scrollbar-color: #007bff00 #f0f0f000;
+    scrollbar-width: thin;
+  }
+  
+
+  .btn-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .btn-link:focus {
+    outline: none;
+  }
+
+  

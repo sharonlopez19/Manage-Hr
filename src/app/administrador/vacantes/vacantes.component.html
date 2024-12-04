@@ -1,104 +1,162 @@
 <app-nav></app-nav>
 <app-menu></app-menu>
+<app-titulo></app-titulo>
 
 <div class="container-fluid">
     <!-- Contenido principal (85%) -->
     <div class="contenido-principal">
         <!-- Lista de vacantes (70%) -->
         <div class="lista-vacantes">
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://semcore.pl/wp-content/uploads/2023/09/a-1.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
+            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
+                <div class="d-flex align-items-center">
+                    <div class="vacante-foto me-3">
+                        <img src="https://i1.wp.com/blog.enriqueoriol.com/wp-content/uploads/2018/01/AngularLogo.jpg?fit=1200%2C675" alt="Desarrollador Frontend" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="vacante-info">
+                        <h5>Desarrollador Frontend Angular</h5>
+                        <p>$8,000,000 COP</p>
+                    </div>
                 </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Frontend</h5>
-                    <p>$2,000 USD</p>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://img.freepik.com/premium-photo/delighted-programmer-with-glasses-using-computer_109710-706.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
-                </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Backend</h5>
-                    <p>$2,500 USD</p>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://img.freepik.com/premium-photo/delighted-programmer-with-glasses-using-computer_109710-706.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
-                </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Backend</h5>
-                    <p>$2,500 USD</p>
+                <!-- Íconos de editar y eliminar -->
+                <div class="acciones">
+                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
+                      <i class="fas fa-edit text-primary"></i>
+                    </button>
+                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
+                      <i class="fas fa-trash-alt text-danger"></i>
+                    </button>
                 </div>
             </div>
 
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://img.freepik.com/premium-photo/delighted-programmer-with-glasses-using-computer_109710-706.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
+            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
+                <div class="d-flex align-items-center">
+                    <div class="vacante-foto me-3">
+                        <img src="https://www.adm.ee/wordpress/wp-content/uploads/2023/08/JAVA.png" alt="Desarrollador Backend" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="vacante-info">
+                        <h5>Desarrollador Backend Java</h5>
+                        <p>$7,000,000 COP</p>
+                    </div>
                 </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Backend</h5>
-                    <p>$2,500 USD</p>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://img.freepik.com/premium-photo/delighted-programmer-with-glasses-using-computer_109710-706.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
-                </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Backend</h5>
-                    <p>$2,500 USD</p>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://img.freepik.com/premium-photo/delighted-programmer-with-glasses-using-computer_109710-706.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
-                </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Backend</h5>
-                    <p>$2,500 USD</p>
+                <div class="acciones">
+                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
+                      <i class="fas fa-edit text-primary"></i>
+                    </button>
+                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
+                      <i class="fas fa-trash-alt text-danger"></i>
+                    </button>
                 </div>
             </div>
 
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://weremote.net/wp-content/uploads/2023/04/desarrolladora-usando-chat-gpt.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
+            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
+                <div class="d-flex align-items-center">
+                    <div class="vacante-foto me-3">
+                        <img src="https://weareshifta.com/wp-content/uploads/diseno-ux-1.jpg" alt="Diseñador UX/UI" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="vacante-info">
+                        <h5>Diseñador UX/UI</h5>
+                        <p>$5,500,000 COP</p>
+                    </div>
                 </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Backend</h5>
-                    <p>$2,500 USD</p>
-                </div>
-            </div>
-            
-            <div class="vacante mb-3 d-flex border-bottom pb-3">
-                <div class="vacante-foto me-3">
-                    <img src="https://img.freepik.com/premium-photo/delighted-programmer-with-glasses-using-computer_109710-706.jpg" alt="Foto de la vacante" class="img-fluid rounded-circle" />
-                </div>
-                <div class="vacante-info">
-                    <h5>Desarrollador Backend</h5>
-                    <p>$2,500 USD</p>
+                <div class="acciones">
+                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
+                      <i class="fas fa-edit text-primary"></i>
+                    </button>
+                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
+                      <i class="fas fa-trash-alt text-danger"></i>
+                    </button>
                 </div>
             </div>
 
-         
+            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
+                <div class="d-flex align-items-center">
+                    <div class="vacante-foto me-3">
+                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2021/02/architect-working-on-blueprint-with-team-picture-id1189899412.jpg" alt="Gerente de Proyecto" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="vacante-info">
+                        <h5>Gerente de Proyecto</h5>
+                        <p>$10,000,000 COP</p>
+                    </div>
+                </div>
+                <div class="acciones">
+                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
+                      <i class="fas fa-edit text-primary"></i>
+                    </button>
+                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
+                      <i class="fas fa-trash-alt text-danger"></i>
+                    </button>
+                </div>
+            </div>
 
-            <!-- Más vacantes aquí... -->
+            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
+                <div class="d-flex align-items-center">
+                    <div class="vacante-foto me-3">
+                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2022/03/handsome-smiling-it-specialist-using-laptop-computer-in-data-center-picture-id1336250788.jpg" alt="Científico de Datos" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="vacante-info">
+                        <h5>Científico de Datos</h5>
+                        <p>$9,500,000 COP</p>
+                    </div>
+                </div>
+                <div class="acciones">
+                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
+                      <i class="fas fa-edit text-primary"></i>
+                    </button>
+                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
+                      <i class="fas fa-trash-alt text-danger"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
+                <div class="d-flex align-items-center">
+                    <div class="vacante-foto me-3">
+                        <img src="https://www.unir.net/wp-content/uploads/sites/22/2021/06/beautiful-male-computer-engineer-and-scientists-create-neural-network-picture-id1182697690.jpg" alt="Administrador de Sistemas" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="vacante-info">
+                        <h5>Administrador de Sistemas</h5>
+                        <p>$6,500,000 COP</p>
+                    </div>
+                </div>
+                <div class="acciones">
+                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
+                      <i class="fas fa-edit text-primary"></i>
+                    </button>
+                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
+                      <i class="fas fa-trash-alt text-danger"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
+                <div class="d-flex align-items-center">
+                    <div class="vacante-foto me-3">
+                        <img src="https://www.itcsystem.es/wp-content/uploads/2022/07/tecnico-sistemas-informaticos.png" alt="Administrador de Sistemas" class="img-fluid rounded-circle" />
+                    </div>
+                    <div class="vacante-info">
+                        <h5>Tecnico de Sistemas</h5>
+                        <p>$4,600,000 COP</p>
+                    </div>
+                </div>
+                <div class="acciones">
+                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
+                      <i class="fas fa-edit text-primary"></i>
+                    </button>
+                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
+                      <i class="fas fa-trash-alt text-danger"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- Detalles de la vacante (30%) -->
         <div class="detalles-vacante">
-            <h2 class="detalles-titulo">Detalles de la vacante</h2>
+            <h2 class="detalles-titulo">Desarrollador Frontend Angular</h2>
             <p class="detalles-descripcion">
                 Descripción de la vacante, requisitos y otros detalles importantes. Esta vacante está orientada a desarrolladores frontend que tengan experiencia en tecnologías web modernas.
             </p>
             <h4>Salario:</h4>
-            <p class="vacante-salario">$2,000 USD</p>
+            <p class="vacante-salario">$8.000.000 COP</p>
             <h4>Ubicación:</h4>
             <p>Remoto</p>
             <h4>Requisitos:</h4>
@@ -110,3 +168,5 @@
         </div>
     </div>
 </div>
+
+

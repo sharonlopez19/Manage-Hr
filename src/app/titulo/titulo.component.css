@@ -1,0 +1,13 @@
+.page-title-container {
+    background: linear-gradient(90deg, #007bff, #42a5f5);
+    width: 80%; /* Ocupar el 85% del ancho */
+    margin-left: 17%; /* Dejar espacio para la barra lateral */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un mejor estilo */
+    border-radius: 5px; /* Bordes redondeados */
+    position: fixed;
+    margin-top: 5%;
+   
+    
+  
+  }
+  
