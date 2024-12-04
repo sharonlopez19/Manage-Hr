@@ -55,7 +55,7 @@
 /* Estilo para la información de la vacante */
 .vacante-info {
     margin-left: 15px; /* Espacio entre la foto y la información */
-    color: rgb(250, 240, 240); /* Cambié el color a más oscuro para mayor contraste */
+    color: rgb(250, 240, 240); 
 }
 
 /* Estilo para el nombre de la vacante */
@@ -77,23 +77,25 @@
 
 /* Estilo para el título de los detalles */
 .detalles-titulo {
-    font-size: 25px;
+    font-size: 26px;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 10px;
-    background-color: #1e2131;
+    background-color: #0edd5300;
     align-items: center;
     justify-content: center;
     text-align: center;
     border-radius: 6px;
     padding: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    font-style: oblique;
+    
 }
 
 /* Estilo para la descripción de los detalles */
 .detalles-descripcion {
     font-size: 16px;
-    color: #21ce11;
+    color: #21ce1100;
     line-height: 1.5;
     margin: 0;
 }
@@ -144,36 +146,39 @@ app-menu {
 .detalles-vacante {
     width: 30%; /* Toma el 30% del contenedor principal */
     padding: 20px;
-    border: 1px solid #dddddd00;
-    background: linear-gradient(90deg, #007bff, #42a5f5);
-    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background: var(--sidebar-bg);
+    border-radius: 10px;
 }
 
 .detalles-vacante li{
-    background-color: #121a24;
-    color: #ddd;
+    background-color: #121a2400;
+    color: var( --text-hover);
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+    border: 2px solid #ffffff3a;
+
     
     
 }
 
 .detalles-vacante p{
-    background-color: #121a24;
     color: #ddd;
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+    border: 2px solid #ffffff3a;
+    background-color: #121a2400;
 }
 
 .detalles-vacante h4{
-    background-color: #ffffff;
-    color: #121730;
+    background-color: var(--color-principal);
+    color: #cfd0da;
     padding: 5px;
     border-radius: 5px;
-    margin: 10px;
-    font-size: 20px;
+    margin: 13px;
+    font-size: 18px;
 }
 
 /* Aseguramos que la caja de detalles se mantenga fija en la página */
