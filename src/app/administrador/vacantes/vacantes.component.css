@@ -1,0 +1,262 @@
+/* Estilo para el contenedor de la lista de vacantes */
+#vacante-lista {
+    width: 70%; /* Asegura que la lista ocupe el 70% */
+    padding-right: 20px; /* Espaciado a la derecha */
+    overflow-y: auto; /* Barra de desplazamiento a la derecha */
+    background-color: #f9f9f9;
+    height: 100vh; /* Asegura que la lista ocupe toda la altura disponible */
+    margin-right: 0; /* Elimina margen que podría empujar la barra de desplazamiento */
+}
+
+/* Estilo para cada vacante */
+/* Estilo base de la vacante */
+/* Estilo base de la vacante */
+.vacante {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espaciado entre vacantes */
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid white; /* Borde inicial blanco para todas las direcciones */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #181a22; /* Fondo de cada vacante */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animación de borde */
+}
+
+/* Estilo cuando el ratón está encima de la vacante */
+.vacante:hover {
+    border-color: #007bff; /* Borde azul al pasar el ratón */
+}
+
+/* Estilo cuando la vacante está enfocada (al hacer clic) */
+.vacante:focus {
+    border-color: #007bff; /* Borde azul al hacer clic */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra azul */
+    outline: none; /* Quita el borde por defecto de focus */
+}
+
+/* Asegura que el borde inferior también se cambie al azul al enfocarse */
+.vacante:focus, .vacante:hover {
+    border-top: 1px solid #007bff;    /* Asegura que el borde superior también sea azul */
+    border-right: 1px solid #007bff;  /* Borde derecho también azul */
+    border-bottom: 1px solid #007bff; /* Borde inferior también azul */
+    border-left: 1px solid #007bff;   /* Borde izquierdo también azul */
+}
+
+
+/* Estilo para la foto de la vacante */
+.vacante-foto img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Foto redonda */
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+/* Estilo para la información de la vacante */
+.vacante-info {
+    margin-left: 15px; /* Espacio entre la foto y la información */
+    color: rgb(250, 240, 240); 
+}
+
+/* Estilo para el nombre de la vacante */
+.vacante-nombre {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ced128;
+    margin: 0;
+}
+
+/* Estilo para el salario de la vacante */
+.vacante-salario {
+    font-size: 16px;
+    color: #28a745;
+    margin: 5px 0 0 0;
+}
+
+
+
+/* Estilo para el título de los detalles */
+.detalles-titulo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+    background-color: #0edd5300;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-style: oblique;
+    
+}
+
+/* Estilo para la descripción de los detalles */
+.detalles-descripcion {
+    font-size: 16px;
+    color: #21ce1100;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Contenedor de la lista de vacantes */
+.container-fluid {
+    display: flex;
+    height: 100vh; /* Altura completa de la pantalla */
+    padding: 0;
+    margin-top: 0%;
+    width: 95%;
+}
+
+/* Sidebar */
+app-menu {
+    position: fixed; /* Fija el sidebar en el lado izquierdo */
+    width: 15%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+/* Contenedor principal de las vacantes */
+.contenido-principal {
+    margin-left: 15%; /* Deja espacio para el sidebar */
+    width: 85%; /* El contenido ocupa el 85% */
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Para que la lista y detalles estén lado a lado */
+    justify-content: space-between;
+    margin-top: 10%;
+    
+}
+
+/* Ajustes en la lista de vacantes */
+.lista-vacantes {
+    width: 70%; /* Toma el 70% del contenedor principal */
+    padding-right: 20px;
+    overflow-y: auto; /* Permite la barra de desplazamiento en la parte derecha */
+    max-height: 100vh; /* Limita la altura para que no se desborde */
+    margin-right: 10px; /* Alinea bien la lista con un pequeño margen a la derecha */
+    
+}
+
+
+/* Detalles de la vacante */
+.detalles-vacante {
+    width: 30%; /* Toma el 30% del contenedor principal */
+    padding: 20px;
+    border: 1px solid #ffffff;
+    background: var(--sidebar-bg);
+    border-radius: 10px;
+}
+
+.detalles-vacante li{
+    background-color: #121a2400;
+    color: var( --text-hover);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    border: 2px solid #ffffff3a;
+
+    
+    
+}
+
+.detalles-vacante p{
+    color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    border: 2px solid #ffffff3a;
+    background-color: #121a2400;
+}
+
+.detalles-vacante h4{
+    background-color: var(--color-principal);
+    color: #cfd0da;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 13px;
+    font-size: 18px;
+}
+
+/* Aseguramos que la caja de detalles se mantenga fija en la página */
+.detalles-vacante-fixed {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.vacante-foto img {
+    width: 70px; /* Cambié el tamaño de la imagen a 80px */
+    height: 70px; /* Ajusté la altura para mantener la proporción */
+    border-radius: 50%; /* Foto redonda */
+    object-fit: cover;
+    border: 1px solid #ffffff;
+    margin-left: 10px;
+}
+
+/* Estilo para los íconos de acciones */
+.acciones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+    
+    
+}
+
+.acciones i {
+    font-size: 25px; /* Tamaño del ícono */
+    cursor: pointer; /* Cambia el cursor para indicar interactividad */
+
+    
+}
+
+
+
+
+
+/* Webkit Browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f0f0f000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #007bff00, #42a4f500);
+    border-radius: 6px;
+    border: 2px solid #f0f0f000;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #e0e0e000;
+    border-radius: 6px;
+  }
+  
+  /* Firefox */
+  html {
+    scrollbar-color: #007bff00 #f0f0f000;
+    scrollbar-width: thin;
+  }
+  
+
+  .btn-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .btn-link:focus {
+    outline: none;
+  }
+
+  

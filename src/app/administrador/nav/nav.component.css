@@ -1,0 +1,52 @@
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    left: 16.5%;
+    right: 3%;
+    height: 6%;
+    background-color: #202940 !important;  /* Color personalizado */
+    z-index: 999;  /* Asegura que el navbar esté sobre otros elementos */
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;  /* Asegura que los elementos estén separados */
+    align-items: center;  /* Centra los elementos verticalmente */
+    width: 100%;
+}
+
+.search-bar input {
+    width: 300px;
+    background-color: #ffffff00;  /* Fondo blanco */
+    color: #ffffff;  /* Texto blanco */
+    border: 1px solid #ffffff;  /* Borde gris claro */
+    margin-top: 20px;
+}
+
+.search-bar input::placeholder {
+    color: #ffffff86;  /* Cambia el color del texto del placeholder a blanco */
+}
+
+.notification-container {
+    display: flex;  /* Asegura que el contenedor sea flexible */
+    align-items: center;  /* Alinea el icono verticalmente */
+}
+
+.notification-button {
+    background-color: rgba(0, 255, 255, 0);
+    border: #91282800;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+
+.notification-button:hover {
+    background-color: rgba(0, 255, 255, 0);
+    border: #91282800;
+    font-size: 24px;
+    color: #2e60f8;
+}
+/* Asegurarse de que el icono se vea correctamente */
+.notification-button i {
+    font-size: 28px;  /* Asegura que el tamaño del icono sea lo suficientemente grande */
+}
