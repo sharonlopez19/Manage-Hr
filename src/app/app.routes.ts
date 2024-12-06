@@ -7,6 +7,7 @@ import { VacantesComponent } from './administrador/vacantes/vacantes.component';
 import { VacacionesComponent } from './administrador/vacaciones/vacaciones.component';
 import { IncapacidadesComponent } from './administrador/incapacidades/incapacidades.component';
 import { HorasExtraComponent } from './administrador/horas-extra/horas-extra.component';
+import { NotificacionesComponent } from './administrador/notificaciones/notificaciones.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -18,4 +19,5 @@ export const routes: Routes = [
   { path: 'vacaciones', component: VacacionesComponent },
   { path: 'incapacidades', component: IncapacidadesComponent },
   { path: 'horas-extra', component: HorasExtraComponent },
+  { path: 'notificaciones', component: NotificacionesComponent },
 ];

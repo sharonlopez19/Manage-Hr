@@ -1,0 +1,29 @@
+/* Layout principal */
+.layout {
+  display: flex; /* Crea un diseño en fila */
+  height: 100vh; /* Usa toda la altura de la pantalla */
+}
+
+/* Barra lateral */
+app-menu {
+  box-sizing: border-box; /* Evita que el padding altere el tamaño */
+  position: fixed; /* Fija la barra lateral */
+  left: 0; /* Alineación a la izquierda */
+  top: 0; /* Alineación al top */
+}
+
+/* Contenido principal */
+.contenido-principal {
+  flex: 1; /* Ocupa el resto del espacio */
+  padding: 20px; /* Espaciado interno */
+  margin-right: 2%;
+  margin-bottom: 20px;
+  margin-left: 15%; /* Deja espacio para la barra lateral */
+  margin-top: 80px;
+  display: flex;
+  background-color: #555;
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  overflow-y: auto; /* Permite desplazamiento si el contenido excede */
+}
+
