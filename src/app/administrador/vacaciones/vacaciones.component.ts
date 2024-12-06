@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
-import { AppComponent } from "../../app.component";
+import Swal from 'sweetalert2';
+import { Component, OnInit } from '@angular/core';
 import { MenuComponent } from "../menu/menu.component";
+
+
 
 @Component({
   selector: 'app-vacaciones',
   standalone: true,
-  imports: [AppComponent, MenuComponent],
+  imports: [MenuComponent],
+  // tslint:disable-next-line: max-line-length
   templateUrl: './vacaciones.component.html',
-  styleUrl: './vacaciones.component.css'
+  styleUrls: ['./vacaciones.component.scss']
 })
 export class VacacionesComponent {
-
 }

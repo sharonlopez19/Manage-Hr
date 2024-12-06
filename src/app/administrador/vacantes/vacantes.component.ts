@@ -1,13 +1,12 @@
 import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
 import { MenuComponent } from "../menu/menu.component";
-import { NavComponent } from "../nav/nav.component";
-import { TituloComponent } from "../../titulo/titulo.component";
+
 
 @Component({
   selector: 'app-vacantes',
   standalone: true,
-  imports: [MenuComponent, NavComponent, TituloComponent],
+  imports: [MenuComponent,],
   templateUrl: './vacantes.component.html',
   styleUrls: ['./vacantes.component.css'] // Corregido: debe ser `styleUrls` en plural
 })
@@ -33,7 +32,7 @@ export class VacantesComponent {
       if (result.isConfirmed) {
         // Llama la lógica de eliminación
         this.deleteItem();
-        
+
         // Muestra el mensaje de éxito
         Swal.fire(
           '¡Eliminado!',

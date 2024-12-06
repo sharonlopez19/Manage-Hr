@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { VacacionesComponent } from './vacaciones.component';
 
 describe('VacacionesComponent', () => {
@@ -8,10 +7,12 @@ describe('VacacionesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VacacionesComponent]
+      declarations: [ VacacionesComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(VacacionesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +20,10 @@ describe('VacacionesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display summary data correctly', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.summary li:nth-child(1) span').textContent).toContain('25');
   });
 });
