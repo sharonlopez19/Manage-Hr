@@ -1,0 +1,329 @@
+:host {
+    display: block;
+  }
+  
+  .main-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+  
+  .card {
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    border-radius: 20px;
+    background: rgba(63, 63, 63, 0.479);
+    border: 5px solid rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 32px rgb(0, 0, 0);
+  
+    // Estado normal
+    .sign-in {
+        .btn-primary,
+        h1,
+        .social-icons,
+        span,
+        .form-floating,
+        .olvidar {  // Añadido .olvidar aquí
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        }
+      }
+  
+    
+  
+    .sign-up {
+      .btn-primary,
+      h1,
+      .social-icons,
+      span,
+      .form-floating {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+      }
+    }
+  
+    &.active {
+      .sign-in {
+        transform: translateX(100%);
+        z-index: 1;  // Reducido el z-index cuando está inactivo
+  
+        .btn-primary,
+      h1,
+      .social-icons,
+      span,
+      .form-floating,
+      .olvidar {  // Añadido .olvidar aquí
+        opacity: 0;
+        visibility: hidden;
+        transition-delay: 0s;
+      }
+    }
+  
+      .sign-up {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: move 0.6s;
+  
+        .btn-primary,
+        h1,
+        .social-icons,
+        span,
+        .form-floating {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+  
+      .toggle-container {
+        transform: translateX(-100%);
+        border-radius: 0 100px 100px 0;
+      }
+  
+      .toggle {
+        transform: translateX(50%);
+      }
+  
+      .toggle-left {
+        transform: translateX(0);
+      }
+  
+      .toggle-right {
+        transform: translateX(200%);
+      }
+    }
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    width: 50%;
+  }
+  
+  .sign-in {
+    left: 0;
+    z-index: 2;
+  }
+  
+  .sign-up {
+    .text-muted.small.mb-3 // el texto "o usa tu correo para registrarte"
+    {
+      // el enlace "¿Olvidaste tu contraseña?"
+      display: none !important;
+    }
+  
+    .olvidar {
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+    }
+  
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .form-control {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 0 !important;
+    color: white !important;
+    padding: 0.75rem 0 !important;
+    transition: all 0.3s ease;
+  
+    &:focus {
+      background: transparent !important;
+      border-bottom-color: #3b82f6 !important;
+      box-shadow: none !important;
+    }
+  
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+  
+  .form-floating {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+    position: relative;
+  
+    label {
+      color: rgba(255, 255, 255, 0.6) !important;
+      padding: 0.75rem 0 !important;
+      height: auto !important;
+      transform-origin: left !important;
+      transition: all 0.3s ease !important;
+      background: transparent !important;
+  
+      &::after {
+        display: none !important;
+      }
+    }
+  
+    & > .form-control:focus ~ label,
+    & > .form-control:not(:placeholder-shown) ~ label {
+      transform: translateY(-1.5rem) scale(0.85) !important;
+      color: #3b82f6 !important;
+      opacity: 1;
+    }
+  }
+  
+  .toggle-container {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    z-index: 1000;
+    border-radius: 100px 0 0 100px;
+  }
+  
+  .toggle {
+    background: linear-gradient(
+      to right,
+      rgba(45, 84, 206, 0.9),
+      rgba(37, 207, 243, 0.9)
+    );
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+  }
+  
+  .toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .toggle-left {
+    transform: translateX(-200%);
+  }
+  
+  .toggle-right {
+    right: 0;
+    transform: translateX(0);
+  }
+  
+  @keyframes move {
+    0%,
+    49.99% {
+      opacity: 0;
+      z-index: 1;
+    }
+    50%,
+    100% {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  
+  // Estilos adicionales para mejorar la apariencia
+  h1 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  p,
+  span {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .btn-primary {
+    background: #3b82f6 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 500 !important;
+  
+    &:hover {
+      background: #2563eb !important;
+    }
+  }
+  
+  .btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  
+    &:hover {
+      color: white;
+    }
+  }
+  
+  .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  .form-floating {
+    width: 100%;
+    max-width: 300px;
+  }
+  

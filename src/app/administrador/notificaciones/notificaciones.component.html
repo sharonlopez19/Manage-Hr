@@ -1,0 +1,304 @@
+<app-menu></app-menu>
+<app-titulo [title]="'Notificaciones'"></app-titulo>
+
+<div class="layout">
+  <div class="contenido-principal">
+    <div class="notifications-container">
+      <!-- Notificación 1 -->
+      <div class="notification">
+        <div class="notification-user">
+          <img src="https://www.hola.com/horizon/landscape/6a53cd5134b2-getty-chica-feliz-t.jpg?im=Resize=(640),type=downsize" alt="Foto de usuario" class="notification-avatar" />
+          <span>Juanita Pérez</span>
+        </div>
+        <div class="notification-date">
+          <span>6 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Envió una solicitud de vacaciones para el periodo del 10 al 15 de diciembre.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'Juanita Pérez',
+            avatar: 'https://www.hola.com/horizon/landscape/6a53cd5134b2-getty-chica-feliz-t.jpg?im=Resize=(640),type=downsize',
+            date: '6 de diciembre, 2024',
+            message: 'Envió una solicitud de vacaciones para el periodo del 10 al 15 de diciembre.',
+            daysRequested: '5 días',
+            requirements: 'Formulario de solicitud completo'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notificación 2 -->
+      <div class="notification">
+        <div class="notification-user">
+          <img src="https://www.clarin.com/2024/04/25/HKCtyMwSF_2000x1500__1.jpg" alt="Foto de usuario" class="notification-avatar" />
+          <span>María Bonilla</span>
+        </div>
+        <div class="notification-date">
+          <span>5 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Se postuló para la vacante de Ingeniero de Sistemas. Revisar CV adjunto.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'María Bonilla',
+            avatar: 'https://www.clarin.com/2024/04/25/HKCtyMwSF_2000x1500__1.jpg',
+            date: '5 de diciembre, 2024',
+            message: 'Se postuló para la vacante de Ingeniero de Sistemas. Revisar CV adjunto.',
+            requirements: 'CV adjunto en formato PDF'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notificación 3 -->
+      <div class="notification">
+        <div class="notification-user">
+          <img src="https://media.istockphoto.com/id/1090878494/es/foto/retrato-de-joven-sonriente-a-hombre-guapo-en-camiseta-polo-azul-aislado-sobre-fondo-gris-de.jpg?s=612x612&w=0&k=20&c=dHFsDEJSZ1kuSO4wTDAEaGOJEF-HuToZ6Gt-E2odc6U=" alt="Foto de usuario" class="notification-avatar" />
+          <span>Pablo Alvarez</span>
+        </div>
+        <div class="notification-date">
+          <span>5 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Solicitó días adicionales de vacaciones. Revisar detalles.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'Pablo Alvarez',
+            avatar: 'https://media.istockphoto.com/id/1090878494/es/foto/retrato-de-joven-sonriente-a-hombre-guapo-en-camiseta-polo-azul-aislado-sobre-fondo-gris-de.jpg?s=612x612&w=0&k=20&c=dHFsDEJSZ1kuSO4wTDAEaGOJEF-HuToZ6Gt-E2odc6U=',
+            date: '5 de diciembre, 2024',
+            message: 'Solicitó días adicionales de vacaciones. Revisar detalles.',
+            daysRequested: '3 días adicionales',
+            requirements: 'Carta de autorización'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+       <!-- Notificación 1 -->
+       <div class="notification">
+        <div class="notification-user">
+          <img src="https://www.hola.com/horizon/landscape/6a53cd5134b2-getty-chica-feliz-t.jpg?im=Resize=(640),type=downsize" alt="Foto de usuario" class="notification-avatar" />
+          <span>Juanita Pérez</span>
+        </div>
+        <div class="notification-date">
+          <span>6 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Envió una solicitud de vacaciones para el periodo del 10 al 15 de diciembre.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'Juanita Pérez',
+            avatar: 'https://www.hola.com/horizon/landscape/6a53cd5134b2-getty-chica-feliz-t.jpg?im=Resize=(640),type=downsize',
+            date: '6 de diciembre, 2024',
+            message: 'Envió una solicitud de vacaciones para el periodo del 10 al 15 de diciembre.',
+            daysRequested: '5 días',
+            requirements: 'Formulario de solicitud completo'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notificación 2 -->
+      <div class="notification">
+        <div class="notification-user">
+          <img src="https://www.clarin.com/2024/04/25/HKCtyMwSF_2000x1500__1.jpg" alt="Foto de usuario" class="notification-avatar" />
+          <span>María Bonilla</span>
+        </div>
+        <div class="notification-date">
+          <span>5 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Se postuló para la vacante de Ingeniero de Sistemas. Revisar CV adjunto.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'María Bonilla',
+            avatar: 'https://www.clarin.com/2024/04/25/HKCtyMwSF_2000x1500__1.jpg',
+            date: '5 de diciembre, 2024',
+            message: 'Se postuló para la vacante de Ingeniero de Sistemas. Revisar CV adjunto.',
+            requirements: 'CV adjunto en formato PDF'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notificación 3 -->
+      <div class="notification">
+        <div class="notification-user">
+          <img src="https://media.istockphoto.com/id/1090878494/es/foto/retrato-de-joven-sonriente-a-hombre-guapo-en-camiseta-polo-azul-aislado-sobre-fondo-gris-de.jpg?s=612x612&w=0&k=20&c=dHFsDEJSZ1kuSO4wTDAEaGOJEF-HuToZ6Gt-E2odc6U=" alt="Foto de usuario" class="notification-avatar" />
+          <span>Pablo Alvarez</span>
+        </div>
+        <div class="notification-date">
+          <span>5 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Solicitó días adicionales de vacaciones. Revisar detalles.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'Pablo Alvarez',
+            avatar: 'https://media.istockphoto.com/id/1090878494/es/foto/retrato-de-joven-sonriente-a-hombre-guapo-en-camiseta-polo-azul-aislado-sobre-fondo-gris-de.jpg?s=612x612&w=0&k=20&c=dHFsDEJSZ1kuSO4wTDAEaGOJEF-HuToZ6Gt-E2odc6U=',
+            date: '5 de diciembre, 2024',
+            message: 'Solicitó días adicionales de vacaciones. Revisar detalles.',
+            daysRequested: '3 días adicionales',
+            requirements: 'Carta de autorización'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+       <!-- Notificación 1 -->
+       <div class="notification">
+        <div class="notification-user">
+          <img src="https://www.hola.com/horizon/landscape/6a53cd5134b2-getty-chica-feliz-t.jpg?im=Resize=(640),type=downsize" alt="Foto de usuario" class="notification-avatar" />
+          <span>Juanita Pérez</span>
+        </div>
+        <div class="notification-date">
+          <span>6 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Envió una solicitud de vacaciones para el periodo del 10 al 15 de diciembre.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'Juanita Pérez',
+            avatar: 'https://www.hola.com/horizon/landscape/6a53cd5134b2-getty-chica-feliz-t.jpg?im=Resize=(640),type=downsize',
+            date: '6 de diciembre, 2024',
+            message: 'Envió una solicitud de vacaciones para el periodo del 10 al 15 de diciembre.',
+            daysRequested: '5 días',
+            requirements: 'Formulario de solicitud completo'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notificación 2 -->
+      <div class="notification">
+        <div class="notification-user">
+          <img src="https://www.clarin.com/2024/04/25/HKCtyMwSF_2000x1500__1.jpg" alt="Foto de usuario" class="notification-avatar" />
+          <span>María Bonilla</span>
+        </div>
+        <div class="notification-date">
+          <span>5 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Se postuló para la vacante de Ingeniero de Sistemas. Revisar CV adjunto.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'María Bonilla',
+            avatar: 'https://www.clarin.com/2024/04/25/HKCtyMwSF_2000x1500__1.jpg',
+            date: '5 de diciembre, 2024',
+            message: 'Se postuló para la vacante de Ingeniero de Sistemas. Revisar CV adjunto.',
+            requirements: 'CV adjunto en formato PDF'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Notificación 3 -->
+      <div class="notification">
+        <div class="notification-user">
+          <img src="https://media.istockphoto.com/id/1090878494/es/foto/retrato-de-joven-sonriente-a-hombre-guapo-en-camiseta-polo-azul-aislado-sobre-fondo-gris-de.jpg?s=612x612&w=0&k=20&c=dHFsDEJSZ1kuSO4wTDAEaGOJEF-HuToZ6Gt-E2odc6U=" alt="Foto de usuario" class="notification-avatar" />
+          <span>Pablo Alvarez</span>
+        </div>
+        <div class="notification-date">
+          <span>5 de diciembre, 2024</span>
+        </div>
+        <div class="notification-message">
+          <p>Solicitó días adicionales de vacaciones. Revisar detalles.</p>
+        </div>
+        <div class="notification-actions">
+          <button class="view-btn" (click)="openDetailsModal({
+            name: 'Pablo Alvarez',
+            avatar: 'https://media.istockphoto.com/id/1090878494/es/foto/retrato-de-joven-sonriente-a-hombre-guapo-en-camiseta-polo-azul-aislado-sobre-fondo-gris-de.jpg?s=612x612&w=0&k=20&c=dHFsDEJSZ1kuSO4wTDAEaGOJEF-HuToZ6Gt-E2odc6U=',
+            date: '5 de diciembre, 2024',
+            message: 'Solicitó días adicionales de vacaciones. Revisar detalles.',
+            daysRequested: '3 días adicionales',
+            requirements: 'Carta de autorización'
+          })">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="delete-btn" (click)="showDeleteAlert()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Puedes seguir agregando más notificaciones -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Bootstrap -->
+<div
+  class="modal fade"
+  id="detailsModal"
+  tabindex="-1"
+  aria-labelledby="detailsModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailsModalLabel">Detalles de la Notificación</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre:</strong> {{ selectedNotification?.name }}</p>
+        <p><strong>Fecha:</strong> {{ selectedNotification?.date }}</p>
+        <p><strong>Mensaje:</strong> {{ selectedNotification?.message }}</p>
+        <p><strong>Detalles adicionales:</strong></p>
+        <ul>
+          <li *ngIf="selectedNotification?.daysRequested">Días solicitados: {{ selectedNotification?.daysRequested }}</li>
+          <li *ngIf="selectedNotification?.requirements">Requisitos: {{ selectedNotification?.requirements }}</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="acceptRequest()">Aceptar</button>
+        <button type="button" class="btn btn-danger" (click)="rejectRequest()">Rechazar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

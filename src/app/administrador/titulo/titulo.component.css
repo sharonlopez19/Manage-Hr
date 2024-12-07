@@ -1,0 +1,19 @@
+/* TituloComponent - Estilos */
+.titulo-container {
+    width: 80%; /* Reducción del ancho al 60% */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color de texto */
+    text-align: center; /* Centrado de texto */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* Espaciado superior e inferior */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    margin-left: 15%; /* Desplazamiento a la derecha para no solaparse con la sidebar */
+    position: relative;
+    margin-top: 2%;
+    border-radius: 12px;
+    height: 6%;
+    
+  }
+  

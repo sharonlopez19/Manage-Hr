@@ -1,0 +1,66 @@
+<div class="main-container">
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center bg-gradient">
+        <div class="card border-0 shadow-lg position-relative overflow-hidden" #loginContainer>
+            <!-- Formulario de Registro -->
+            <div class="form-container sign-up position-absolute w-50 h-100">
+                <form class="h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                    <h1 class="mb-4">Crear Cuenta</h1>
+                    <span class="text-muted small mb-3">o usa tu correo para registrarte</span>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="text" class="form-control" id="nameInput" placeholder="">
+                        <label for="nameInput">Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="email" class="form-control" id="emailInput" placeholder="">
+                        <label for="emailInput">Correo electrónico</label>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="password" class="form-control" id="passwordInput" placeholder="">
+                        <label for="passwordInput">Contraseña</label>
+                    </div>
+                    <button type="button" class="btn btn-primary px-4 py-2">Registrarse</button>
+                </form>
+            </div>
+
+            <!-- Formulario de Login -->
+            <div class="form-container sign-in position-absolute w-50 h-100">
+                <form class="h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                    <h1 class="mb-4">Iniciar Sesión</h1>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-github'></i></a>
+                    </div>
+                    <span class="text-muted small mb-3">o usa tu correo y contraseña</span>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="email" class="form-control" id="loginEmail" placeholder="">
+                        <label for="loginEmail">Correo electrónico</label>
+                    </div>
+                    <div class="form-floating mb-3 w-100">
+                        <input type="password" class="form-control" id="loginPassword" placeholder="">
+                        <label for="loginPassword">Contraseña</label>
+                    </div>
+                    <a href="#" class="olvidar text-decoration-none small mb-3">¿Olvidaste tu contraseña?</a>
+                    <button type="button" class="btn btn-primary px-4 py-2" (click)="onLogin()">Iniciar Sesión</button>
+                </form>
+            </div>
+
+            <!-- Panel de Toggle -->
+            <div class="toggle-container position-absolute h-100">
+                <div class="toggle h-100">
+                    <div class="toggle-panel toggle-left h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
+                        <h1 class="text-white mb-3">¡Bienvenido de nuevo!</h1>
+                        <p class="text-white-50">Ingresa tus datos personales para usar todas las funciones del sitio</p>
+                        <button class="btn btn-outline-light" (click)="toggleLogin()">Iniciar Sesión</button>
+                    </div>
+                    <div class="toggle-panel toggle-right h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
+                        <h1 class="text-white mb-3">¡Hola, amigo!</h1>
+                        <p class="text-white-50">Regístrate con tus datos personales para usar todas las funciones del sitio</p>
+                        <button class="btn btn-outline-light" (click)="toggleRegister()">Registrarse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
