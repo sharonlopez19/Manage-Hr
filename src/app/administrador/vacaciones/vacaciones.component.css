@@ -2,6 +2,7 @@
 .layout {
   display: flex; /* Crea un diseño en fila */
   height: 100vh; /* Usa toda la altura de la pantalla */
+  flex-direction: row; /* Asegura que los elementos estén en fila */
 }
 
 /* Barra lateral */
@@ -10,20 +11,141 @@ app-menu {
   position: fixed; /* Fija la barra lateral */
   left: 0; /* Alineación a la izquierda */
   top: 0; /* Alineación al top */
+  width: 16%; /* Define un ancho fijo o ajustable para la barra lateral */
+  height: 100%; /* Hace que la barra lateral ocupe toda la altura */
+  background-color: var(--sidebar-bg);
+  z-index: 100; /* Asegura que esté sobre el contenido principal */
 }
 
 /* Contenido principal */
 .contenido-principal {
-  flex: 1; /* Ocupa el resto del espacio */
-  padding: 20px; /* Espaciado interno */
-  margin-right: 2%;
-  margin-bottom: 20px;
-  margin-left: 15%; /* Deja espacio para la barra lateral */
-  margin-top: 80px;
+  flex: 1; /* Ocupa el resto del espacio disponible */
+  margin-left: 16%; /* Deja espacio para la barra lateral */
+  margin-top: 2px;
   display: flex;
-  background-color: #555;
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
-  overflow-y: auto; /* Permite desplazamiento si el contenido excede */
+  overflow: auto; /* Asegura que el contenido que sobrepase se pueda desplazar */
+  padding: 10px; /* Añade algo de espacio alrededor del contenido */
 }
 
+/* Card */
+.card {
+  border: none;
+  background-color: var(--sidebar-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header vacaciones */
+.header-vacaciones {
+  background: linear-gradient(90deg, var(--color-principal), var(--active-color));
+  padding: 10px 20px;
+  margin-top: 60px;
+}
+
+/* Botón Agregar */
+.agregar-btn {
+  background-color: var(--active-bg);
+  border: none;
+  color: var(--text-hover);
+  transition: all 0.3s ease;
+}
+
+.agregar-btn:hover {
+  background-color: var(--text-hover);
+  color: var(--color-principal);
+}
+
+/* Tabla */
+.table-container {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  overflow-x: auto; /* Permite el desplazamiento horizontal si la tabla es más ancha que la pantalla */
+  margin-top: 20px; /* Añade algo de espacio superior */
+  margin-bottom: 20px; /* Añade espacio inferior */
+}
+
+.table {
+  width: 100%; /* La tabla ocupa todo el ancho disponible */
+  table-layout: fixed; /* Establece un layout fijo para las celdas */
+  color: var(--text-color);
+  border-collapse: collapse; /* Elimina los espacios entre las celdas */
+}
+
+.table th, .table td {
+  padding: 12px; /* Añade espacio interno a las celdas */
+  text-align: left; /* Alineación de texto en las celdas */
+  border-bottom: 1px solid var(--border-color); /* Línea de separación entre filas */
+}
+
+/* Filas alternas */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05); /* Fondo alterno en las filas */
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--active-bg); /* Color de fondo al pasar el mouse */
+}
+
+.table-sm th, .table-sm td {
+  padding: 6px 10px; /* Reduce el padding si se desea una tabla más compacta */
+}
+
+/* Estados - badges en la tabla */
+.table .badge {
+  padding: 0.3em 0.5em;
+  font-size: 0.8rem; /* Reducido el tamaño de la fuente */
+}
+
+.text-end {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  height: 100%; /* Asegura que ocupe todo el alto disponible */
+  margin-top: 20px;
+  align-self: center;
+}
+
+/* Estados - badges */
+.badge {
+  padding: 0.5em 0.75em;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.badge-complete {
+  background-color: #28a745; /* Verde */
+  color: var(--text-hover);
+}
+
+.badge-rechazado {
+  background-color: #dc3545; /* Rojo */
+  color: var(--text-hover);
+}
+
+.badge-aprobado {
+  background-color: var(--active-color); /* Azul */
+  color: var(--text-hover);
+}
+
+.badge-pendiente {
+  background-color: #ffc107; /* Amarillo */
+  color: var(--text-hover);
+}
+
+/* Botones de acciones */
+.btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.btn-success {
+  background-color: --active-color;
+  border-color: --border-color;
+}
+
+.btn-danger {
+  background-color: --active-color;
+  border-color: --border-color;
+}

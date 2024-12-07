@@ -20,4 +20,5 @@ export const routes: Routes = [
   { path: 'incapacidades', component: IncapacidadesComponent },
   { path: 'horas-extra', component: HorasExtraComponent },
   { path: 'notificaciones', component: NotificacionesComponent },
+  {path:'**',redirectTo: 'inicio'},
 ];

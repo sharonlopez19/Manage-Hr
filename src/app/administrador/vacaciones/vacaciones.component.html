@@ -2,6 +2,138 @@
 
 <div class="layout">
   <div class="contenido-principal">
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header header-vacaciones d-flex justify-content-between align-items-center">
+          <h3 class="m-0 text-hover">Vacaciones</h3>
+          <button class="btn btn-light btn-sm agregar-btn" (click)="agregarVacacion()">
+            <i class="bi bi-plus-circle"></i> Agregar
+          </button>
+        </div>
+        <div class="card-body">
+          <table class="table table-dark table-hover text-center">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Cargo</th>
+                <th>Estado</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Final</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Michael</td>
+                <td>Asesor</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>15/07/24</td>
+                <td>19/12/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Laurent Perrier</td>
+                <td>Programador</td>
+                <td><span class="badge badge-rechazado">Rechazado</span></td>
+                <td>17/07/24</td>
+                <td>03/08/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Michael Clark</td>
+                <td>Asesor</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>18/07/24</td>
+                <td>19/12/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr><tr>
+                <td>Richard Owens</td>
+                <td>Director</td>
+                <td><span class="badge badge-pendiente">Pendiente</span></td>
+                <td>30/12/24</td>
+                <td>03/03/25</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr><tr>
+                <td>Johana Castro</td>
+                <td>Asesor</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>10/09/24</td>
+                <td>05/10/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr><tr>
+                <td>Alexa Liras</td>
+                <td>Desarrollador</td>
+                <td><span class="badge badge-pendiente">Pendiente</span></td>
+                <td>16/07/24</td>
+                <td>31/09/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr><tr>
+                <td>Diego Mahecha</td>
+                <td>Programador</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>18/07/24</td>
+                <td>25/09/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr><tr>
+                <td>Diana Betancourt</td>
+                <td>Analista</td>
+                <td><span class="badge badge-rechazado">Rechazado</span></td>
+                <td>11/02/24</td>
+                <td>30/02/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr><tr>
+                <td>Carlos Yordan</td>
+                <td>Asesor</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>09/10/24</td>
+                <td>09/11/24</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr><tr>
+                <td>Alexander Gusman</td>
+                <td>Coordinador</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>10/12/24</td>
+                <td>07/01/25</td>
+                <td>
+                  <button class="btn btn-success btn-sm me-1" (click)="editarVacacion()">Editar</button>
+                  <button class="btn btn-danger btn-sm" (click)="eliminarVacacion()">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-end">
+            <button class="btn btn-primary" (click)="generarReporte()">Generar Reporte</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>
