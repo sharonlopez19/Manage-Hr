@@ -1,12 +1,12 @@
 import Swal from 'sweetalert2';
 import { Component } from '@angular/core';
 import { MenuComponent } from "../menu/menu.component";
-
+import { TituloComponent } from '../titulo/titulo.component';
 
 @Component({
   selector: 'app-vacantes',
   standalone: true,
-  imports: [MenuComponent,],
+  imports: [MenuComponent, TituloComponent], // Ambos componentes ahora en un solo arreglo
   templateUrl: './vacantes.component.html',
   styleUrls: ['./vacantes.component.css'] // Corregido: debe ser `styleUrls` en plural
 })

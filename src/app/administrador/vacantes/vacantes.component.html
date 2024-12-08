@@ -1,14 +1,16 @@
 <app-menu></app-menu>
+<app-titulo [title]="'Vacantes'"></app-titulo>
 
 <div class="container-fluid">
     <!-- Contenido principal (85%) -->
     <div class="contenido-principal">
-        <!-- Lista de vacantes (70%) -->
+        
         <div class="lista-vacantes">
             <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
                 <div class="d-flex align-items-center">
                     <div class="vacante-foto me-3">
-                        <img src="https://i1.wp.com/blog.enriqueoriol.com/wp-content/uploads/2018/01/AngularLogo.jpg?fit=1200%2C675" alt="Desarrollador Frontend" class="img-fluid rounded-circle" />
+                        <img src="https://victorroblesweb.es/wp-content/uploads/2017/04/angular4.png"
+                            alt="Desarrollador Frontend" class="img-fluid rounded-circle" />
                     </div>
                     <div class="vacante-info">
                         <h5>Desarrollador Frontend Angular</h5>
@@ -17,11 +19,11 @@
                 </div>
                 <!-- Íconos de editar y eliminar -->
                 <div class="acciones">
-                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
-                      <i class="fas fa-edit text-primary"></i>
+                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
+                        <i class="fas fa-edit text-primary"></i>
                     </button>
                     <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                      <i class="fas fa-trash-alt text-danger"></i>
+                        <i class="fas fa-trash-alt text-danger"></i>
                     </button>
                 </div>
             </div>
@@ -29,7 +31,8 @@
             <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
                 <div class="d-flex align-items-center">
                     <div class="vacante-foto me-3">
-                        <img src="https://www.adm.ee/wordpress/wp-content/uploads/2023/08/JAVA.png" alt="Desarrollador Backend" class="img-fluid rounded-circle" />
+                        <img src="https://www.adm.ee/wordpress/wp-content/uploads/2023/08/JAVA.png" alt="Desarrollador Backend"
+                            class="img-fluid rounded-circle" />
                     </div>
                     <div class="vacante-info">
                         <h5>Desarrollador Backend Java</h5>
@@ -37,11 +40,11 @@
                     </div>
                 </div>
                 <div class="acciones">
-                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
-                      <i class="fas fa-edit text-primary"></i>
+                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
+                        <i class="fas fa-edit text-primary"></i>
                     </button>
                     <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                      <i class="fas fa-trash-alt text-danger"></i>
+                        <i class="fas fa-trash-alt text-danger"></i>
                     </button>
                 </div>
             </div>
@@ -49,7 +52,8 @@
             <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
                 <div class="d-flex align-items-center">
                     <div class="vacante-foto me-3">
-                        <img src="https://weareshifta.com/wp-content/uploads/diseno-ux-1.jpg" alt="Diseñador UX/UI" class="img-fluid rounded-circle" />
+                        <img src="https://weareshifta.com/wp-content/uploads/diseno-ux-1.jpg" alt="Diseñador UX/UI"
+                            class="img-fluid rounded-circle" />
                     </div>
                     <div class="vacante-info">
                         <h5>Diseñador UX/UI</h5>
@@ -57,11 +61,11 @@
                     </div>
                 </div>
                 <div class="acciones">
-                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
-                      <i class="fas fa-edit text-primary"></i>
+                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
+                        <i class="fas fa-edit text-primary"></i>
                     </button>
                     <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                      <i class="fas fa-trash-alt text-danger"></i>
+                        <i class="fas fa-trash-alt text-danger"></i>
                     </button>
                 </div>
             </div>
@@ -69,7 +73,8 @@
             <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
                 <div class="d-flex align-items-center">
                     <div class="vacante-foto me-3">
-                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2021/02/architect-working-on-blueprint-with-team-picture-id1189899412.jpg" alt="Gerente de Proyecto" class="img-fluid rounded-circle" />
+                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2021/02/architect-working-on-blueprint-with-team-picture-id1189899412.jpg"
+                            alt="Gerente de Proyecto" class="img-fluid rounded-circle" />
                     </div>
                     <div class="vacante-info">
                         <h5>Gerente de Proyecto</h5>
@@ -77,11 +82,11 @@
                     </div>
                 </div>
                 <div class="acciones">
-                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
-                      <i class="fas fa-edit text-primary"></i>
+                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
+                        <i class="fas fa-edit text-primary"></i>
                     </button>
                     <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                      <i class="fas fa-trash-alt text-danger"></i>
+                        <i class="fas fa-trash-alt text-danger"></i>
                     </button>
                 </div>
             </div>
@@ -89,7 +94,8 @@
             <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
                 <div class="d-flex align-items-center">
                     <div class="vacante-foto me-3">
-                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2022/03/handsome-smiling-it-specialist-using-laptop-computer-in-data-center-picture-id1336250788.jpg" alt="Científico de Datos" class="img-fluid rounded-circle" />
+                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2022/03/handsome-smiling-it-specialist-using-laptop-computer-in-data-center-picture-id1336250788.jpg"
+                            alt="Científico de Datos" class="img-fluid rounded-circle" />
                     </div>
                     <div class="vacante-info">
                         <h5>Científico de Datos</h5>
@@ -97,11 +103,11 @@
                     </div>
                 </div>
                 <div class="acciones">
-                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
-                      <i class="fas fa-edit text-primary"></i>
+                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
+                        <i class="fas fa-edit text-primary"></i>
                     </button>
                     <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                      <i class="fas fa-trash-alt text-danger"></i>
+                        <i class="fas fa-trash-alt text-danger"></i>
                     </button>
                 </div>
             </div>
@@ -109,7 +115,8 @@
             <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
                 <div class="d-flex align-items-center">
                     <div class="vacante-foto me-3">
-                        <img src="https://www.unir.net/wp-content/uploads/sites/22/2021/06/beautiful-male-computer-engineer-and-scientists-create-neural-network-picture-id1182697690.jpg" alt="Administrador de Sistemas" class="img-fluid rounded-circle" />
+                        <img src="https://www.unir.net/wp-content/uploads/sites/22/2021/06/beautiful-male-computer-engineer-and-scientists-create-neural-network-picture-id1182697690.jpg"
+                            alt="Administrador de Sistemas" class="img-fluid rounded-circle" />
                     </div>
                     <div class="vacante-info">
                         <h5>Administrador de Sistemas</h5>
@@ -117,11 +124,11 @@
                     </div>
                 </div>
                 <div class="acciones">
-                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
-                      <i class="fas fa-edit text-primary"></i>
+                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
+                        <i class="fas fa-edit text-primary"></i>
                     </button>
                     <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                      <i class="fas fa-trash-alt text-danger"></i>
+                        <i class="fas fa-trash-alt text-danger"></i>
                     </button>
                 </div>
             </div>
@@ -129,7 +136,8 @@
             <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
                 <div class="d-flex align-items-center">
                     <div class="vacante-foto me-3">
-                        <img src="https://www.itcsystem.es/wp-content/uploads/2022/07/tecnico-sistemas-informaticos.png" alt="Administrador de Sistemas" class="img-fluid rounded-circle" />
+                        <img src="https://www.itcsystem.es/wp-content/uploads/2022/07/tecnico-sistemas-informaticos.png"
+                            alt="Tecnico de Sistemas" class="img-fluid rounded-circle" />
                     </div>
                     <div class="vacante-info">
                         <h5>Tecnico de Sistemas</h5>
@@ -137,34 +145,123 @@
                     </div>
                 </div>
                 <div class="acciones">
-                    <button class="btn btn-link" (click)="onEdit()" title="Editar">
-                      <i class="fas fa-edit text-primary"></i>
+                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
+                        <i class="fas fa-edit text-primary"></i>
                     </button>
                     <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                      <i class="fas fa-trash-alt text-danger"></i>
+                        <i class="fas fa-trash-alt text-danger"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Detalles de la vacante (30%) -->
-        <div class="detalles-vacante">
-            <h2 class="detalles-titulo">Desarrollador Frontend Angular</h2>
-            <p class="detalles-descripcion">
-                Descripción de la vacante, requisitos y otros detalles importantes. Esta vacante está orientada a desarrolladores frontend que tengan experiencia en tecnologías web modernas.
-            </p>
-            <h4>Salario:</h4>
-            <p class="vacante-salario">$8.000.000 COP</p>
-            <h4>Ubicación:</h4>
-            <p>Remoto</p>
-            <h4>Requisitos:</h4>
-            <ul>
-                <li>Experiencia en Angular y React</li>
-                <li>Conocimientos en HTML5, CSS3, y JavaScript</li>
-                <li>Habilidad para trabajar en equipo</li>
-            </ul>
+        <!-- Contenedor de los detalles de la vacante -->
+<div class="detalles-vacante">
+    <h2 class="detalles-titulo">Desarrollador Frontend Angular</h2>
+    <p class="detalles-descripcion">
+        Descripción de la vacante, requisitos y otros detalles importantes. Esta vacante está orientada a desarrolladores frontend que tengan experiencia en tecnologías web modernas.
+    </p>
+    <h4>Salario:</h4>
+    <p class="vacante-salario">$8.000.000 COP</p>
+    <h4>Ubicación:</h4>
+    <p>Remoto</p>
+    <h4>Requisitos:</h4>
+    <ul>
+        <li>Experiencia en Angular y React</li>
+        <li>Conocimientos en HTML5, CSS3, y JavaScript</li>
+        <li>Habilidad para trabajar en equipo</li>
+    </ul>
+    
+    <!-- Botón para agregar una nueva vacante (en la esquina inferior derecha) -->
+    <button class="btn btn-success agregar-vacante-btn" data-bs-toggle="modal" data-bs-target="#agregarVacanteModal">
+        <i class="fas fa-plus"></i> 
+    </button>
+</div>
+
+<!-- Modal para agregar una nueva vacante -->
+<div class="modal fade" id="agregarVacanteModal" tabindex="-1" aria-labelledby="agregarVacanteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="agregarVacanteModalLabel">Agregar Nueva Vacante</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="vacante-titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="vacante-titulo" placeholder="Ej. Desarrollador Frontend">
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-salario" class="form-label">Salario</label>
+                        <input type="text" class="form-control" id="vacante-salario" placeholder="Ej. $8,000,000 COP">
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="vacante-descripcion" placeholder="Detalles de la vacante"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-requisitos" class="form-label">Requisitos</label>
+                        <textarea class="form-control" id="vacante-requisitos" placeholder="Requisitos de la vacante"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-ubicacion" class="form-label">Ubicación</label>
+                        <input type="text" class="form-control" id="vacante-ubicacion" placeholder="Ubicación de la vacante">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Agregar Vacante</button>
+            </div>
         </div>
     </div>
 </div>
 
+    </div>
+</div>
 
+<!-- Modal de Edición -->
+<div class="modal fade" id="editarVacanteModal" tabindex="-1" aria-labelledby="editarVacanteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarVacanteModalLabel">Editar Vacante</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="vacante-titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="vacante-titulo" value="Desarrollador Frontend Angular">
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-salario" class="form-label">Salario</label>
+                        <input type="text" class="form-control" id="vacante-salario" value="$8,000,000 COP">
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="vacante-descripcion">Descripción de la vacante, requisitos y otros detalles importantes.</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-requisitos" class="form-label">Requisitos</label>
+                        <textarea class="form-control" id="vacante-requisitos">Experiencia en Angular y React, conocimientos en HTML5, CSS3, y JavaScript.</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="vacante-ubicacion" class="form-label">Ubicación</label>
+                        <input type="text" class="form-control" id="vacante-ubicacion" value="Remoto">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts necesarios para Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
