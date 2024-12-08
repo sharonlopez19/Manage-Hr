@@ -1,19 +1,17 @@
-/* TituloComponent - Estilos */
 .titulo-container {
-    width: 80%; /* Reducción del ancho al 60% */
-    background-color: #007bff; /* Color de fondo */
-    color: white; /* Color de texto */
-    text-align: center; /* Centrado de texto */
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0; /* Espaciado superior e inferior */
-    font-size: 1.5rem; /* Tamaño de fuente */
-    font-weight: bold; /* Negrita */
-    margin-left: 15%; /* Desplazamiento a la derecha para no solaparse con la sidebar */
-    position: relative;
-    margin-top: 2%;
-    border-radius: 12px;
-    height: 6%;
-    
-  }
+  width: 100%; /* Ancho del contenedor */
+  background-color: var(--color-principal); /* Fondo del contenedor */
+  color: white; /* Color del texto */
+  text-align: center; /* Texto centrado */
+  justify-content: center; /* Centrado de contenido (para Flexbox) */
+  align-items: center; /* Centrado de contenido (para Flexbox) */
+  padding: 10px 0; /* Espaciado superior e inferior */
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  position: relative; /* Posición relativa para ajustes */
+  margin-top: 2%; /* Margen superior */
+  height: 6%; /* Altura del contenedor */
+  border-radius: 12px 12px 0 0; 
+}
+
   
