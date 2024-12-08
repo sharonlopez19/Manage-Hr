@@ -2,6 +2,227 @@
 
 <div class="layout">
   <div class="contenido-principal">
-
+    <div class="container mt-4">
+      <div class="card">
+        <div
+          class="card-header header-horas d-flex justify-content-between align-items-center"
+        >
+          <h3 class="m-0 text-hover">Horas Extras</h3>
+          <button
+            class="btn btn-light btn-sm agregar-btn"
+            (click)="agregarHorasExtras()"
+          >
+            <i class="bi bi-plus-circle"></i> Agregar
+          </button>
+        </div>
+        <div class="card-body">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Cargo</th>
+                <th>Fecha</th>
+                <th>Hora Inicio</th>
+                <th>Hora Final</th>
+                <th>Total Horas</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Michael</td>
+                <td>Asesor</td>
+                <td>15/07/24</td>
+                <td>17:00</td>
+                <td>20:00</td>
+                <td>3</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Laurent Perrier</td>
+                <td>Programador</td>
+                <td>17/07/24</td>
+                <td>18:00</td>
+                <td>22:00</td>
+                <td>4</td>
+                <td><span class="badge badge-pendiente">Pendiente</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Michael Clark</td>
+                <td>Desarrollador</td>
+                <td>18/07/24</td>
+                <td>16:00</td>
+                <td>21:00</td>
+                <td>5</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Diana Betancourt</td>
+                <td>Analista</td>
+                <td>19/07/24</td>
+                <td>17:30</td>
+                <td>20:30</td>
+                <td>3</td>
+                <td><span class="badge badge-rechazado">Rechazado</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Carlos Yordan</td>
+                <td>Asesor</td>
+                <td>20/07/24</td>
+                <td>15:00</td>
+                <td>20:00</td>
+                <td>5</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Alexa Liras</td>
+                <td>Desarrollador</td>
+                <td>21/07/24</td>
+                <td>14:00</td>
+                <td>19:00</td>
+                <td>5</td>
+                <td><span class="badge badge-pendiente">Pendiente</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Richard Owens</td>
+                <td>Director</td>
+                <td>22/07/24</td>
+                <td>16:30</td>
+                <td>21:30</td>
+                <td>5</td>
+                <td><span class="badge badge-complete">Complete</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Diego Mahecha</td>
+                <td>Programador</td>
+                <td>23/07/24</td>
+                <td>17:00</td>
+                <td>20:00</td>
+                <td>3</td>
+                <td><span class="badge badge-pendiente">Pendiente</span></td>
+                <td>
+                  <button
+                    class="btn btn-success btn-sm me-1"
+                    (click)="editarHorasExtras()"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="eliminarHorasExtras()"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-end">
+            <button class="btn btn-primary" (click)="generarReporte()">
+              Generar Reporte
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

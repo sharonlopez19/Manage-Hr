@@ -1,29 +1,252 @@
 /* Layout principal */
 .layout {
-  display: flex; /* Crea un diseño en fila */
-  height: 100vh; /* Usa toda la altura de la pantalla */
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
 }
 
 /* Barra lateral */
 app-menu {
-  box-sizing: border-box; /* Evita que el padding altere el tamaño */
-  position: fixed; /* Fija la barra lateral */
-  left: 0; /* Alineación a la izquierda */
-  top: 0; /* Alineación al top */
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 16%;
+  height: 100%;
+  background-color: var(--sidebar-bg);
+  z-index: 100;
 }
 
 /* Contenido principal */
 .contenido-principal {
-  flex: 1; /* Ocupa el resto del espacio */
-  padding: 20px; /* Espaciado interno */
-  margin-right: 2%;
-  margin-bottom: 20px;
-  margin-left: 15%; /* Deja espacio para la barra lateral */
-  margin-top: 80px;
+  flex: 1;
+  margin-left: 16%;
+  margin-top: 2px;
   display: flex;
-  background-color: #555;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  overflow-y: auto; /* Permite desplazamiento si el contenido excede */
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  padding: 10px;
 }
 
+/* Card */
+.card {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Header horas extras */
+.header-horas {
+  background: linear-gradient(90deg, var(--color-principal), var(--active-color));
+  padding: 10px 20px;
+  margin-top: 60px;
+  color: var(--text-hover);
+}
+
+/* Tabla */
+.table {
+  width: 100%;
+  color: var(--text-color);
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  background-color: var(--sidebar-bg);
+  color: var(--text-hover);
+}
+
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-hover);
+}
+
+/* Estilo base para las filas */
+.table tbody tr {
+  background-color: var(--sidebar-bg);
+  transition: all 0.3s ease;
+}
+
+/* Hover de la tabla */
+.table tbody tr:hover,
+.table tbody tr:hover td {
+  background-color: var(--active-color) !important;
+  background: var(--active-bg) !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Estados - badges */
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.badge-complete {
+  background-color: #28a745;
+  color: var(--text-hover);
+}
+
+.badge-pendiente {
+  background-color: #ffc107;
+  color: var(--text-hover);
+}
+
+.badge-rechazado {
+  background-color: #dc3545;
+  color: var(--text-hover);
+}
+
+/* Botones */
+.btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+/* Botón Agregar */
+.agregar-btn {
+  background-color: var(--active-bg);
+  border: none;
+  color: var(--text-hover);
+  transition: all 0.3s ease;
+}
+
+.agregar-btn:hover {
+  background-color: var(--text-hover);
+  color: var(--color-principal);
+}
+
+/* Contenedor del botón Generar Reporte */
+.text-end {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estilos del Modal y Form */
+.form-container {
+  padding: 1rem;
+  background-color: var(--sidebar-bg);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  color: #ddd !important;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-input {
+  height: 38px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0.5rem 1rem !important;
+  background-color: #1a1e2c !important;
+  border: 1px solid #2e354f !important;
+  border-radius: 4px !important;
+  color: white !important;
+  font-size: 0.9rem !important;
+}
+
+.custom-input:focus {
+  border-color: #386dff !important;
+  box-shadow: 0 0 0 2px rgba(56, 109, 255, 0.25) !important;
+}
+
+.time-inputs-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.time-group {
+  flex: 1;
+}
+
+/* SweetAlert2 Personalización */
+.swal-dark {
+  border-radius: 10px !important;
+}
+
+.swal2-popup {
+  font-size: 0.9rem !important;
+  background-color: var(--sidebar-bg) !important;
+  border-radius: 8px !important;
+}
+
+.swal2-title {
+  color: var(--text-hover) !important;
+  font-size: 1.3rem !important;
+  padding: 1rem 0 !important;
+}
+
+.swal2-html-container {
+  margin: 0 !important;
+}
+
+.swal2-close {
+  color: var(--text-hover) !important;
+}
+
+.swal2-actions {
+  margin-top: 1.5rem !important;
+}
+
+.swal2-confirm {
+  background-color: #28a745 !important;
+  color: var(--text-hover) !important;
+}
+
+.swal2-cancel {
+  background-color: #dc3545 !important;
+  color: var(--text-hover) !important;
+}
+
+.swal2-input, 
+.swal2-select {
+  background-color: #1a1e2c !important;
+  color: white !important;
+  border: 1px solid #2e354f !important;
+}
+
+.swal2-input:focus, 
+.swal2-select:focus {
+  border-color: #386dff !important;
+  box-shadow: 0 0 0 2px rgba(56, 109, 255, 0.25) !important;
+}
+
+.swal2-label {
+  color: white !important;
+}

@@ -101,6 +101,7 @@ app-menu {
 .table tbody tr:hover td {
   background-color: var(--active-color) !important;
   background: var(--active-bg) !important;
+  color: var(--text-color);
   cursor: pointer;
   transition: all 0.3s ease;
 }
