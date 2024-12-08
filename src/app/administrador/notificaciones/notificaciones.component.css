@@ -15,6 +15,8 @@
   height: 100vh; /* Usa toda la altura de la pantalla */
 }
 
+
+
 /* Barra lateral */
 app-menu {
   box-sizing: border-box; /* Evita que el padding altere el tamaño */
@@ -27,7 +29,9 @@ app-menu {
 .notifications-container {
   width: 96%; /* Ancho completo */
   background-color: var(--sidebar-bg); /* Fondo verde translúcido */
-
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 20px;
   border-radius: 8px;
   box-shadow: none; /* Eliminar el cuadro blanco y la sombra */
@@ -43,6 +47,7 @@ h3 {
   color: #e0191900;
 }
 
+
 /* Estilos para las notificaciones */
 .notification {
   display: flex;
@@ -54,6 +59,7 @@ h3 {
   padding: 15px;
   border-radius: 8px;
   box-shadow: none; /* Eliminar la sombra de las notificaciones */
+  margin-top: 20px;
 }
 
 .notification-user {
@@ -143,7 +149,7 @@ h3 {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5em; /* Ajusta el tamaño del ícono */
+  font-size: 10px; /* Ajusta el tamaño del ícono */
   cursor: pointer;
   padding: 0;
   margin-right: 10px;
@@ -153,4 +159,54 @@ h3 {
 
 .modal-dialog {
   margin-top: 300px; /* Ajusta el valor según tus necesidades */
+}
+
+/* Contenedor de las acciones de notificación */
+.notification-actions {
+  display: flex; /* Asegura que los botones estén alineados horizontalmente */
+  align-items: center; /* Alinea los íconos verticalmente al centro */
+}
+
+/* Estilos para el botón de eliminar */
+.delete-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px; /* Ajusta el tamaño del ícono */
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+  margin-left: 20px;
+  display: inline-flex; /* Asegura que el botón no cambie de disposición */
+  align-items: center; /* Centra el ícono verticalmente */
+}
+
+/* Estilos para el botón de ver (ícono de ojo) */
+.view-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px; /* Ajusta el tamaño del ícono */
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+  margin-left: 20px;
+  display: inline-flex; /* Asegura que el botón no cambie de disposición */
+  align-items: center; /* Centra el ícono verticalmente */
+}
+
+/* Estilos para los íconos dentro de los botones */
+.notification-actions .view-btn i,
+.notification-actions .delete-btn i {
+  font-size: 20px; /* Ajusta el tamaño del ícono */
+  transition: color 0.3s ease;
+}
+
+/* Efecto de cambio de color cuando se pasa el ratón */
+.notification-actions .view-btn i:hover {
+  color: #ffffff93;
+}
+
+.notification-actions .delete-btn i:hover {
+  color: #ffffff8c;
 }

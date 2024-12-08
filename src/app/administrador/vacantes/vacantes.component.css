@@ -8,9 +8,7 @@
     margin-right: 0; /* Elimina margen que podría empujar la barra de desplazamiento */
 }
 
-/* Estilo para cada vacante */
-/* Estilo base de la vacante */
-/* Estilo base de la vacante */
+
 .vacante {
     display: flex;
     align-items: center;
@@ -119,6 +117,29 @@ app-menu {
     color: #fff;
 }
 
+
+
+
+    .titulo {
+        width: 80%; /* Ancho del contenedor */
+        background-color: var(--color-principal); /* Fondo del contenedor */
+        color: white; /* Color del texto */
+        text-align: center; /* Texto centrado */
+        justify-content: center; /* Centrado de contenido (para Flexbox) */
+        align-items: center; /* Centrado de contenido (para Flexbox) */
+        padding: 10px 0; /* Espaciado superior e inferior */
+        font-size: 1.5rem; /* Tamaño del texto */
+        font-weight: bold; /* Texto en negrita */
+        position: relative; /* Posición relativa para ajustes */
+        margin-top: 2%; /* Margen superior */
+        height: 6%; /* Altura del contenedor */
+        border-radius: 12px 12px 0 0; 
+        margin-left: 15%;
+      
+    }
+        
+
+
 /* Contenedor principal de las vacantes */
 .contenido-principal {
     margin-left: 13%; /* Deja espacio para el sidebar */
@@ -155,11 +176,10 @@ app-menu {
 .detalles-vacante li{
     background-color: #121a2400;
     color: var( --text-hover);
-    padding: 10px;
+    padding: 0px;
     border-radius: 5px;
     margin: 10px;
-    border: 2px solid #ffffff3a;
-
+    
     
     
 }
@@ -169,7 +189,6 @@ app-menu {
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
-    border: 2px solid #ffffff3a;
     background-color: #121a2400;
 }
 
@@ -248,6 +267,7 @@ app-menu {
     scrollbar-width: thin;
   }
   
+  
 
   .btn-link {
     background: none;
@@ -275,7 +295,7 @@ app-menu {
     border-radius: 50%;
     padding: 10px 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 120px;
+    margin-top: 30px;
 }
 
 .btn-success:hover {
@@ -287,6 +307,30 @@ app-menu {
     .detalles-vacante {
         padding: 15px;
         margin: 10px;
+
+        p{
+            font-size: 10px;
+    
+        }
+    
+        h5{
+            font-size: 10px;
+           
+        }
+
+        h4{
+            font-size: 10px;
+            
+        }
+
+        h2{
+            font-size: 15px;
+            
+        }
+
+       
+
+
     }
 
     .agregar-vacante-btn {
@@ -308,33 +352,26 @@ app-menu {
     h5{
         font-size: 10px;
     }
+
+    .titulo-container {
+        width: 100%; /* Ancho del contenedor */
+        background-color: var(--color-principal); /* Fondo del contenedor */
+        color: white; /* Color del texto */
+        text-align: center; /* Texto centrado */
+        justify-content: center; /* Centrado de contenido (para Flexbox) */
+        align-items: center; /* Centrado de contenido (para Flexbox) */
+        padding: 10px 0; /* Espaciado superior e inferior */
+        font-size: 1.5rem; /* Tamaño del texto */
+        font-weight: bold; /* Texto en negrita */
+        position: relative; /* Posición relativa para ajustes */
+        margin-top: 2%; /* Margen superior */
+        height: 6%; /* Altura del contenedor */
+        border-radius: 12px 12px 0 0; 
+      }
+      
+        
 }
 
-@media (max-width: 576px) {
-    .detalles-vacante h2 {
-        font-size: 1.5rem;
-    }
 
-    .detalles-vacante p {
-        font-size: 1rem;
-    }
 
-    .detalles-vacante ul {
-        font-size: 0.9rem;
-    }
 
-    .agregar-vacante-btn {
-        bottom: 10px;
-        right: 10px;
-        font-size: 14px;
-        padding: 6px 10px;
-    }
-
-    .btn-success {
-        margin-top: 5px;
-    }
-}
-
-/* Título de la sección de notificaciones */
-/* Título de la sección de notificaciones */
-/* Título de la sección de notificaciones */
