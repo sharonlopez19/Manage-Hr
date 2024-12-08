@@ -1,41 +1,40 @@
 /* Layout principal */
 .layout {
-  display: flex; /* Crea un diseño en fila */
-  height: 100vh; /* Usa toda la altura de la pantalla */
-  flex-direction: row; /* Asegura que los elementos estén en fila */
+  display: flex; 
+  height: 100vh; 
+  flex-direction: row;
 }
 
 /* Barra lateral */
 app-menu {
-  box-sizing: border-box; /* Evita que el padding altere el tamaño */
-  position: fixed; /* Fija la barra lateral */
-  left: 0; /* Alineación a la izquierda */
-  top: 0; /* Alineación al top */
-  width: 16%; /* Define un ancho fijo o ajustable para la barra lateral */
-  height: 100%; /* Hace que la barra lateral ocupe toda la altura */
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 16%;
+  height: 100%;
   background-color: var(--sidebar-bg);
-  z-index: 100; /* Asegura que esté sobre el contenido principal */
+  z-index: 100;
 }
 
 /* Contenido principal */
 .contenido-principal {
-  flex: 1; /* Ocupa el resto del espacio disponible */
-  margin-left: 16%; /* Deja espacio para la barra lateral */
+  flex: 1;
+  margin-left: 16%;
   margin-top: 2px;
   display: flex;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  overflow: auto; /* Asegura que el contenido que sobrepase se pueda desplazar */
-  padding: 10px; /* Añade algo de espacio alrededor del contenido */
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 10px;
 }
 
 /* Card */
 .card {
   border: none;
-  background-color: var(--sidebar-bg);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Header vacaciones */
@@ -43,6 +42,7 @@ app-menu {
   background: linear-gradient(90deg, var(--color-principal), var(--active-color));
   padding: 10px 20px;
   margin-top: 60px;
+  color: var(--text-hover);
 }
 
 /* Botón Agregar */
@@ -60,49 +60,72 @@ app-menu {
 
 /* Tabla */
 .table-container {
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  overflow-x: auto; /* Permite el desplazamiento horizontal si la tabla es más ancha que la pantalla */
-  margin-top: 20px; /* Añade algo de espacio superior */
-  margin-bottom: 20px; /* Añade espacio inferior */
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .table {
-  width: 100%; /* La tabla ocupa todo el ancho disponible */
-  table-layout: fixed; /* Establece un layout fijo para las celdas */
+  width: 100%;
+  table-layout: fixed;
   color: var(--text-color);
-  border-collapse: collapse; /* Elimina los espacios entre las celdas */
+  border-collapse: collapse;
+  background-color: transparent;
 }
 
-.table th, .table td {
-  padding: 12px; /* Añade espacio interno a las celdas */
-  text-align: left; /* Alineación de texto en las celdas */
-  border-bottom: 1px solid var(--border-color); /* Línea de separación entre filas */
+.table th {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--sidebar-bg);
+  color: var(--text-hover);
 }
 
-/* Filas alternas */
-.table-striped tbody tr:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.05); /* Fondo alterno en las filas */
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-hover);
 }
 
-.table-hover tbody tr:hover {
-  background-color: var(--active-bg); /* Color de fondo al pasar el mouse */
+/* Estilo base para las filas */
+.table tbody tr {
+  background-color: var(--sidebar-bg);
+  transition: all 0.3s ease;
 }
 
-.table-sm th, .table-sm td {
-  padding: 6px 10px; /* Reduce el padding si se desea una tabla más compacta */
+/* Hover de la tabla */
+.table tbody tr:hover,
+.table tbody tr:hover td {
+  background-color: var(--active-color) !important;
+  background: var(--active-bg) !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Mantener estilos de badges en hover */
+.table tbody tr:hover .badge {
+  color: var(--text-hover);
+}
+
+/* Mantener estilos de botones en hover */
+.table tbody tr:hover .btn {
+  color: inherit;
 }
 
 /* Estados - badges en la tabla */
 .table .badge {
   padding: 0.3em 0.5em;
-  font-size: 0.8rem; /* Reducido el tamaño de la fuente */
+  font-size: 0.8rem;
 }
 
 .text-end {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
+  justify-content: center;
   align-items: center;
-  height: 100%; /* Asegura que ocupe todo el alto disponible */
+  height: 100%;
   margin-top: 20px;
   align-self: center;
 }
@@ -115,22 +138,22 @@ app-menu {
 }
 
 .badge-complete {
-  background-color: #28a745; /* Verde */
+  background-color: #28a745;
   color: var(--text-hover);
 }
 
 .badge-rechazado {
-  background-color: #dc3545; /* Rojo */
+  background-color: #dc3545;
   color: var(--text-hover);
 }
 
 .badge-aprobado {
-  background-color: var(--active-color); /* Azul */
+  background-color: var(--active-color);
   color: var(--text-hover);
 }
 
 .badge-pendiente {
-  background-color: #ffc107; /* Amarillo */
+  background-color: #ffc107;
   color: var(--text-hover);
 }
 
@@ -141,11 +164,33 @@ app-menu {
 }
 
 .btn-success {
-  background-color: --active-color;
-  border-color: --border-color;
+  background-color: #28a745; /* Verde de Bootstrap */
+  border-color: #28a745;
+  color: #fff;
 }
 
 .btn-danger {
-  background-color: --active-color;
-  border-color: --border-color;
+  background-color: #dc3545; /* Rojo de Bootstrap */
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* Hover para los botones */
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Filas alternas */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-sm th, .table-sm td {
+  padding: 6px 10px;
 }
