@@ -1,0 +1,143 @@
+/* Layout principal */
+.layout {
+    display: flex; /* Crea un diseño en fila */
+    height: 100vh; /* Usa toda la altura de la pantalla */
+  }
+  
+  /* Barra lateral */
+  app-menu {
+    box-sizing: border-box; /* Evita que el padding altere el tamaño */
+    position: fixed; /* Fija la barra lateral */
+    left: 0; /* Alineación a la izquierda */
+    top: 0; /* Alineación al top */
+  }
+  
+  /* Contenido principal */
+  .contenido-principal {
+    flex: 1; /* Ocupa el resto del espacio */
+    padding: 20px; /* Espaciado interno */
+    margin-right: 5%;
+    margin-bottom: 20px;
+    margin-left: 15%; /* Deja espacio para la barra lateral */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos de manera vertical */
+    background-color: #55555500;
+    justify-content: flex-start; /* Alinea al inicio del contenedor */
+    align-items: stretch; /* Asegura que los elementos ocupen el 100% de ancho */
+    overflow-y: auto; /* Permite desplazamiento si el contenido excede */
+  }
+  
+  .header-horas {
+    background: linear-gradient(90deg, var(--color-principal), var(--active-color));
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 10px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    h3 {
+      color: var(--text-hover);
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  
+    .btn {
+      background: var(--text-hover);
+      color: var(--color-principal);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+  }
+  
+  /* Elimina los bordes de la tabla */
+  .table {
+    border-collapse: separate;
+    border-spacing: 0px 0px 0px 10px;
+    border-radius: 20px; /* Bordes redondeados */
+    overflow: hidden; /* Para asegurarse de que los bordes redondeados se apliquen a las celdas */
+  }
+  
+  /* Elimina los bordes de las celdas */
+  .table th, .table td {
+    border: none; 
+    background-color: #1e2131;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  /* Estilo para el encabezado */
+  .table-dark th {
+    background-color: #040a11;
+    color: white;
+  }
+  
+  /* Estilo para las filas alternas */
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Estilo para el botón Agregar */
+  /* Botones de acción - Editar y Eliminar */
+  .btn-acciones {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 0%;
+  }
+  
+  /* Botón de editar */
+  .btn-acciones.editar {
+    background-color: #007bff00; /* Fondo azul */
+    color: white; /* Ícono blanco */
+    font-size: 0.5rem;
+   
+  }
+  
+  .btn-acciones.editar:hover {
+    background-color: #0057b300; /* Fondo azul más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Aumento de tamaño al pasar el ratón */
+  }
+  
+  /* Botón de eliminar */
+  .btn-acciones.eliminar {
+    color: #dc354600; /* Color rojo */
+  }
+  
+  .btn-acciones.eliminar:hover {
+    background-color: #f8d7da; /* Fondo suave al pasar el ratón */
+    color: #842029; /* Color rojo oscuro */
+    transform: scale(1.1); /* Aumento de tamaño al pasar el ratón */
+  }
+  
+  /* Estilo para los iconos dentro de los botones */
+  .btn-acciones i {
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    color: white; /* Color blanco para los íconos */
+  }
+  
+  /* Personalizar la barra de desplazamiento */
+  ::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  /* Personalizar el pulgar de la barra de desplazamiento (el que se mueve) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Color azul del pulgar */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #0056b3; /* Borde azul oscuro */
+  }
+  
+  /* Personalizar el track (parte estática de la barra de desplazamiento) */
+  ::-webkit-scrollbar-track {
+    background-color: #2424248f; /* Fondo claro del track */
+    border-radius: 10px; /* Bordes redondeados */
+  }
