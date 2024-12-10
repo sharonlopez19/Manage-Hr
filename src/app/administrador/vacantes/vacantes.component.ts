@@ -6,7 +6,7 @@ import { TituloComponent } from '../titulo/titulo.component';
 @Component({
   selector: 'app-vacantes',
   standalone: true,
-  imports: [MenuComponent, TituloComponent], // Ambos componentes ahora en un solo arreglo
+  imports: [MenuComponent, ], // Ambos componentes ahora en un solo arreglo
   templateUrl: './vacantes.component.html',
   styleUrls: ['./vacantes.component.css'] // Corregido: debe ser `styleUrls` en plural
 })
