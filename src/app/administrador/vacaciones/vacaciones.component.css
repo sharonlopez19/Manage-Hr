@@ -1,7 +1,7 @@
 /* Layout principal */
 .layout {
-  display: flex; 
-  height: 100vh; 
+  display: flex;
+  height: 100vh;
   flex-direction: row;
 }
 
@@ -13,7 +13,6 @@ app-menu {
   top: 0;
   width: 16%;
   height: 100%;
-  background-color: var(--sidebar-bg);
   z-index: 100;
 }
 
@@ -194,4 +193,88 @@ app-menu {
 
 .table-sm th, .table-sm td {
   padding: 6px 10px;
+}
+
+@media (min-width: 993px),(max-width: 1200px) {
+  .contenido-principal {
+    margin-left: 20%; /* Deja más espacio si se reduce el tamaño */
+  }
+
+
+  .contenido-principal {
+    padding: 5px;
+    margin-left: 2%;
+  }
+
+  .card {
+    margin-bottom: 20px; /* Agrega un espacio entre las cards */
+  }
+
+}
+
+@media (min-width: 769px),(max-width: 992px) {
+  .layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Usa toda la altura de la pantalla */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+  }
+
+
+  .contenido-principal {
+    padding: 5px;
+    margin-left: 17%;
+  }
+
+  .card {
+    margin-bottom: 20px; /* Agrega un espacio entre las cards */
+  }
+
+  .header-vacaciones {
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 10px;
+  }
+
+  .table-sm th, .table-sm td {
+    padding: 6px;
+  }
+
+  .text-end {
+    text-align: center;
+  }
+
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .agregar-btn {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-vacaciones h3 {
+    font-size: 1.2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+
+  .agregar-btn {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .card {
+    margin: 10px;
+  }
+
+  .table th, .table td {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
 }

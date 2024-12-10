@@ -12,7 +12,7 @@ import { NotificacionesComponent } from './administrador/notificaciones/notifica
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'menu', component: MenuComponent },
+  // { path: 'menu', component: MenuComponent },
   { path: 'inicio', component: InicioComponent },
   { path: 'directorio', component: DirectorioComponent },
   { path: 'vacantes', component: VacantesComponent },
@@ -20,5 +20,5 @@ export const routes: Routes = [
   { path: 'incapacidades', component: IncapacidadesComponent },
   { path: 'horas-extra', component: HorasExtraComponent },
   { path: 'notificaciones', component: NotificacionesComponent },
-  {path:'**',redirectTo: 'inicio'},
+  {path:'**',redirectTo: 'directorio'},
 ];

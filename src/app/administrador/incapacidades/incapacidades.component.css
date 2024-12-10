@@ -1,29 +1,291 @@
 /* Layout principal */
 .layout {
-  display: flex; /* Crea un diseño en fila */
-  height: 100vh; /* Usa toda la altura de la pantalla */
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
 }
 
 /* Barra lateral */
 app-menu {
-  box-sizing: border-box; /* Evita que el padding altere el tamaño */
-  position: fixed; /* Fija la barra lateral */
-  left: 0; /* Alineación a la izquierda */
-  top: 0; /* Alineación al top */
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 16%;
+  height: 100%;
+  z-index: 100;
 }
 
 /* Contenido principal */
 .contenido-principal {
-  flex: 1; /* Ocupa el resto del espacio */
-  padding: 20px; /* Espaciado interno */
-  margin-right: 2%;
-  margin-bottom: 20px;
-  margin-left: 15%; /* Deja espacio para la barra lateral */
-  margin-top: 80px;
+  flex: 1;
+  margin-left: 16%;
+  margin-top: 2px;
   display: flex;
-  background-color: #555;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  overflow-y: auto; /* Permite desplazamiento si el contenido excede */
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 10px;
 }
 
+/* Card */
+.card {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header vacaciones */
+.header-vacaciones {
+  background: linear-gradient(90deg, var(--color-principal), var(--active-color));
+  padding: 10px 20px;
+  margin-top: 60px;
+  color: var(--text-hover);
+}
+
+/* Botón Agregar */
+.agregar-btn {
+  background-color: var(--active-bg);
+  border: none;
+  color: var(--text-hover);
+  transition: all 0.3s ease;
+}
+
+.agregar-btn:hover {
+  background-color: var(--text-hover);
+  color: var(--color-principal);
+}
+
+/* Tabla */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+  color: var(--text-color);
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--sidebar-bg);
+  color: var(--text-hover);
+}
+
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-hover);
+}
+
+/* Estilo base para las filas */
+.table tbody tr {
+  background-color: var(--sidebar-bg);
+  transition: all 0.3s ease;
+}
+
+/* Hover de la tabla */
+.table tbody tr:hover,
+.table tbody tr:hover td {
+  background-color: var(--active-color) !important;
+  background: var(--active-bg) !important;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Mantener estilos de badges en hover */
+.table tbody tr:hover .badge {
+  color: var(--text-hover);
+}
+
+/* Mantener estilos de botones en hover */
+.table tbody tr:hover .btn {
+  color: inherit;
+}
+
+/* Estados - badges en la tabla */
+.table .badge {
+  padding: 0.3em 0.5em;
+  font-size: 0.8rem;
+}
+
+.text-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 20px;
+  align-self: center;
+}
+
+/* Estados - badges */
+.badge {
+  padding: 0.5em 0.75em;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.badge-complete {
+  background-color: #28a745;
+  color: var(--text-hover);
+}
+
+.badge-rechazado {
+  background-color: #dc3545;
+  color: var(--text-hover);
+}
+
+.badge-aprobado {
+  background-color: var(--active-color);
+  color: var(--text-hover);
+}
+
+.badge-pendiente {
+  background-color: #ffc107;
+  color: var(--text-hover);
+}
+
+/* Botones de acciones */
+.btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.btn-success {
+  background-color: #28a745; /* Verde de Bootstrap */
+  border-color: #28a745;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Rojo de Bootstrap */
+  border-color: #dc3545;
+  color: #fff;
+}
+
+/* Hover para los botones */
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Filas alternas */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-sm th, .table-sm td {
+  padding: 6px 10px;
+}
+
+@media (min-width: 993px),(max-width: 1200px) {
+  .contenido-principal {
+    margin-left: 20%; /* Deja más espacio si se reduce el tamaño */
+  }
+  app-menu {
+    width: 20%;
+  }
+
+  .contenido-principal {
+    padding: 5px;
+    margin-left: 2%;
+  }
+
+  .card {
+    margin-bottom: 20px; /* Agrega un espacio entre las cards */
+  }
+
+}
+
+@media (min-width: 769px),(max-width: 992px) {
+  .layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Usa toda la altura de la pantalla */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+  }
+
+  app-menu {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 16%;
+    height: 100%;
+    z-index: 100;
+  }
+
+  .contenido-principal {
+    padding: 5px;
+    margin-left: 17%;
+  }
+
+  .card {
+    margin-bottom: 20px; /* Agrega un espacio entre las cards */
+  }
+
+  .header-vacaciones {
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 10px;
+  }
+
+  .table-sm th, .table-sm td {
+    padding: 6px;
+  }
+
+  .text-end {
+    text-align: center;
+  }
+
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .agregar-btn {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-vacaciones h3 {
+    font-size: 1.2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+
+  .agregar-btn {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .card {
+    margin: 10px;
+  }
+
+  .table th, .table td {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
