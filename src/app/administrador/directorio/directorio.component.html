@@ -2,6 +2,86 @@
 
 <div class="layout">
   <div class="contenido-principal">
+    <div class="header-horas d-flex justify-content-between align-items-center">
+      <h3>Directorio</h3>
+      <button class="btn btn-light btn-sm agregar-btn" >
+        <i class="fas fa-plus-circle"></i> Agregar
+      </button>
+    </div>
+    <table class="table table-striped table-bordered table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Cargo</th>
+          <th>Teléfono</th>
+          <th>Correo</th>
+          <th>Dirección</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vacante of vacantes">
+          <td><img [src]="vacante.foto" alt="{{ vacante.nombre }}" class="img-fluid rounded-circle" width="50" height="50" /></td>
+          <td>{{ vacante.nombre }}</td>
+          <td>{{ vacante.cargo }}</td>
+          <td>{{ vacante.telefono }}</td>
+          <td>{{ vacante.correo }}</td>
+          <td>{{ vacante.direccion }}</td>
+          <td><span [class.bg-success]="vacante.estado === 'ACTIVO'" [class.bg-danger]="vacante.estado === 'INACTIVO'" class="badge">{{ vacante.estado }}</span></td>
+          <td>
+            <!-- Botón de editar -->
+            <button class="btn btn-link btn-acciones editar" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar" (click)="editarVacante(vacante)">
+              <i class="fas fa-edit"></i>
+            </button>
+            <!-- Botón de eliminar -->
+            <button class="btn btn-danger btn-sm" (click)="confirmDelete(vacante)">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
 
+    <!-- Modal de edición -->
+    <div class="modal fade" id="editarVacanteModal" tabindex="-1" aria-labelledby="editarVacanteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editarVacanteModalLabel">Editar Vacante</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Formulario de edición -->
+            <form (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="nombreVacante" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreVacante" [(ngModel)]="vacante.nombre" name="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="cargoVacante" class="form-label">Cargo</label>
+                <input type="text" class="form-control" id="cargoVacante" [(ngModel)]="vacante.cargo" name="cargo" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefonoVacante" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="telefonoVacante" [(ngModel)]="vacante.telefono" name="telefono" required>
+              </div>
+              <div class="mb-3">
+                <label for="correoVacante" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correoVacante" [(ngModel)]="vacante.correo" name="correo" required>
+              </div>
+              <div class="mb-3">
+                <label for="direccionVacante" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccionVacante" [(ngModel)]="vacante.direccion" name="direccion" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
