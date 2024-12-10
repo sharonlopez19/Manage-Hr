@@ -13,7 +13,6 @@ app-menu {
   top: 0;
   width: 16%;
   height: 100%;
-  background-color: var(--sidebar-bg);
   z-index: 100;
 }
 
@@ -234,14 +233,14 @@ app-menu {
   color: var(--text-hover) !important;
 }
 
-.swal2-input, 
+.swal2-input,
 .swal2-select {
   background-color: #1a1e2c !important;
   color: white !important;
   border: 1px solid #2e354f !important;
 }
 
-.swal2-input:focus, 
+.swal2-input:focus,
 .swal2-select:focus {
   border-color: #386dff !important;
   box-shadow: 0 0 0 2px rgba(56, 109, 255, 0.25) !important;

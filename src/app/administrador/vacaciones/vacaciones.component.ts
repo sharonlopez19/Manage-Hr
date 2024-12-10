@@ -28,15 +28,45 @@ export class VacacionesComponent {
     });
   }
   editarVacacion() {
+    // Simulando que los datos de la vacación provienen de la tabla o un modelo
+    const vacacion = {
+      nombre: '',
+      cargo: '',
+      fechaInicio: '',
+      fechaFin: '',
+    };
+
     Swal.fire({
       title: 'Editar Vacación',
-      text: '¿Estás seguro que quieres editar esta vacación?',
-      icon: 'warning',
+      html: `
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" class="swal2-input" value="${vacacion.nombre}" />
+        </div>
+        <div class="form-group">
+          <label for="cargo">Cargo</label>
+          <input id="cargo" class="swal2-input" value="${vacacion.cargo}" />
+        </div>
+        <div class="form-group">
+          <label for="fechaInicio">Fecha Inicio</label>
+          <input id="fechaInicio" class="swal2-input" type="date" value="${vacacion.fechaInicio}" />
+        </div>
+        <div class="form-group">
+          <label for="fechaFin">Fecha Fin</label>
+          <input id="fechaFin" class="swal2-input" type="date" value="${vacacion.fechaFin}" />
+        </div>
+      `,
       showCancelButton: true,
-      confirmButtonText: 'Sí, editar',
+      confirmButtonText: 'Guardar Cambios',
       cancelButtonText: 'Cancelar',
-    }).then((result) => {
-      if (result.isConfirmed) {
+      preConfirm: () => {
+        const nombre = (document.getElementById('nombre') as HTMLInputElement).value;
+        const cargo = (document.getElementById('cargo') as HTMLInputElement).value;
+        const fechaInicio = (document.getElementById('fechaInicio') as HTMLInputElement).value;
+        const fechaFin = (document.getElementById('fechaFin') as HTMLInputElement).value;
+
+        // Aquí puedes realizar la lógica para guardar los cambios
+        console.log({ nombre, cargo, fechaInicio, fechaFin });
         Swal.fire('¡Editado!', 'La vacación ha sido editada.', 'success');
       }
     });
