@@ -30,5 +30,12 @@ export class LoginComponent {
       .catch(err => console.error('Error en navegación:', err));
   }
 
+  onVacantes() {
+    this.router.navigate(['/principal'])
+      .then(() => console.log('Navegación exitosa'))
+      .catch(err => console.error('Error en navegación:', err));
+
+  }
+
   
 }
