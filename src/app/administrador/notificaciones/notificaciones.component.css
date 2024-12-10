@@ -1,212 +1,237 @@
-
-.view-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5em;
-  cursor: pointer;
-  padding: 0;
-  margin-right: 10px;
-}
-
 /* Layout principal */
 .layout {
-  display: flex; /* Crea un diseño en fila */
-  height: 100vh; /* Usa toda la altura de la pantalla */
+  display: flex;
+  min-height: 100vh;
+  background-color: #202940;
 }
 
-
-
-/* Barra lateral */
+/* Menú lateral */
 app-menu {
-  box-sizing: border-box; /* Evita que el padding altere el tamaño */
-  position: fixed; /* Fija la barra lateral */
-  left: 0; /* Alineación a la izquierda */
-  top: 0; /* Alineación al top */
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 240px;
+  z-index: 1000;
 }
 
-/* Contenedor de notificaciones */
-.notifications-container {
-  width: 96%; /* Ancho completo */
-  background-color: var(--sidebar-bg); /* Fondo verde translúcido */
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: none; /* Eliminar el cuadro blanco y la sombra */
-  overflow-y: auto; /* Permite desplazamiento vertical si el contenido es largo */
-  max-height: 80vh; /* Altura máxima para la barra de desplazamiento */
-  margin-top: 40px;
-  
-}
-
-h3 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #e0191900;
-}
-
-
-/* Estilos para las notificaciones */
-.notification {
-  display: flex;
-  justify-content: space-between; /* Asegura que los elementos estén distribuidos de manera eficiente */
-  align-items: center;
-  background-color: #181A22;
-  border: 2px solid rgba(255, 255, 255, 0.479);
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: none; /* Eliminar la sombra de las notificaciones */
-  margin-top: 20px;
-}
-
-.notification-user {
-  display: flex;
-  align-items: center;
-  width: 30%; /* Reservamos el 30% del ancho para la foto y nombre */
-  color: #3b82f6;
-}
-
-.notification-avatar {
-  width: 50px; /* Ajusta el tamaño que desees */
-  height: 50px; /* Este debe coincidir con el ancho para un círculo perfecto */
-  border-radius: 50%; /* Hace la imagen circular */
-  object-fit: cover; /* Evita distorsión al recortar la imagen */
-  object-position: center; /* Centra el recorte */
-  margin-left: 10px;
-  margin-right: 30px;
-}
-
-
-.notification-date {
-  width: 20%; /* Reservamos el 20% del ancho para la fecha */
-  text-align: center; /* Centra la fecha */
-}
-
-.notification-message {
-  width: 45%; /* El 45% restante es para el mensaje */
-  padding-left: 10px; /* Espacio entre la fecha y el mensaje */
-}
-
-.notification-message p {
-  margin: 0;
-  color: #b1afaf;
-  font-size: 1em;
-}
-
-.notification-date span {
-  color: #b1afaf;
-  font-size: 0.9em;
-}
-
-/* Ajustes específicos de estilo */
-.layout {
-  display: flex;
-  height: 100vh; /* Usa toda la altura de la pantalla */
-}
-
+/* Contenido principal */
 .contenido-principal {
   flex: 1;
-  padding: 20px;
-  margin-right: 2%;
-  margin-left: 15%; /* Espacio para la barra lateral */
-  margin-top: 0px;
-  background-color: #f4f7f600; /* Fondo claro */
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow-y: auto;
- 
+  margin-left: 280px;
+  padding: 30px;
+  min-height: 100vh;
 }
 
-/* Barra de desplazamiento */
-::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
-  height: 10px; /* Altura de la barra de desplazamiento horizontal */
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 15px; */
 }
 
-/* Pista de la barra de desplazamiento */
-::-webkit-scrollbar-track {
-  background-color: #f1f1f100; /* Color de la pista (fondo de la barra) */
-  border-radius: 10px; /* Bordes redondeados de la pista */
+/* Header de notificaciones */
+.header-horas {
+  background: linear-gradient(90deg, var(--color-principal), var(--active-color));
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    color: var(--text-hover);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .btn {
+    background: var(--text-hover);
+    color: var(--color-principal);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-1px);
+    }
+  }
 }
 
-/* Deslizador (thumb) de la barra de desplazamiento */
-::-webkit-scrollbar-thumb {
-  background-color: #25cc9400; /* Color del deslizador */
-  border-radius: 10px; /* Bordes redondeados del deslizador */
-  border: 2px solid #ffffff00; /* Borde blanco alrededor del deslizador */
+/* Lista de notificaciones */
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* Cuando el deslizador se activa (cuando el usuario está deslizándose) */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #4826e200; /* Color del deslizador cuando se está usando */
+/* Notificación individual */
+.notification {
+  background: var(--sidebar-bg);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+
+  &:hover {
+    background: var(--active-bg);
+    transform: translateY(-1px);
+  }
 }
 
-/* Estilos para el botón de eliminar */
-.delete-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 10px; /* Ajusta el tamaño del ícono */
-  cursor: pointer;
-  padding: 0;
-  margin-right: 10px;
-  margin-left: 20px;
+/* Contenido de la notificación */
+.notification-content {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 15px;
 }
 
-
-.modal-dialog {
-  margin-top: 300px; /* Ajusta el valor según tus necesidades */
+/* Avatar */
+.notification-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* Contenedor de las acciones de notificación */
+/* Información de la notificación */
+.notification-info {
+  flex: 1;
+
+  .user-name {
+    color: var(--active-color);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .notification-text {
+    color: var(--text-hover);
+    font-size: 15px;
+  }
+}
+
+/* Fecha de la notificación */
+.notification-date {
+  color: var(--text-hover);
+  font-size: 0.85rem;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+/* Acciones de la notificación */
 .notification-actions {
-  display: flex; /* Asegura que los botones estén alineados horizontalmente */
-  align-items: center; /* Alinea los íconos verticalmente al centro */
+  display: flex;
+  gap: 10px;
+
+  .action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-hover);
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 1.1rem;
+    }
+
+    &:hover {
+      background: var(--active-bg);
+      
+      &.view {
+        color: var(--active-color);
+      }
+      
+      &.delete {
+        color: #dc3545;
+      }
+    }
+  }
 }
 
-/* Estilos para el botón de eliminar */
-.delete-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px; /* Ajusta el tamaño del ícono */
-  cursor: pointer;
-  padding: 0;
-  margin-right: 10px;
-  margin-left: 20px;
-  display: inline-flex; /* Asegura que el botón no cambie de disposición */
-  align-items: center; /* Centra el ícono verticalmente */
+/* Modal de detalles */
+.modal-content {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-hover);
+
+  .modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+
+    .modal-title {
+      color: var(--active-color);
+      margin: 0;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+  }
+
+  .modal-body {
+    padding: 1rem;
+
+    p {
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+
+    strong {
+      color: var(--active-color);
+    }
+  }
+
+  .modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+  }
 }
 
-/* Estilos para el botón de ver (ícono de ojo) */
-.view-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px; /* Ajusta el tamaño del ícono */
-  cursor: pointer;
-  padding: 0;
-  margin-right: 10px;
-  margin-left: 20px;
-  display: inline-flex; /* Asegura que el botón no cambie de disposición */
-  align-items: center; /* Centra el ícono verticalmente */
+/* Responsive */
+@media (max-width: 768px) {
+  .contenido-principal {
+    margin-left: 70px;
+  }
+
+  .notification-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-date {
+    margin: 5px 0;
+  }
+
+  .notification-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
 }
 
-/* Estilos para los íconos dentro de los botones */
-.notification-actions .view-btn i,
-.notification-actions .delete-btn i {
-  font-size: 20px; /* Ajusta el tamaño del ícono */
-  transition: color 0.3s ease;
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Efecto de cambio de color cuando se pasa el ratón */
-.notification-actions .view-btn i:hover {
-  color: #ffffff93;
+::-webkit-scrollbar-track {
+  background: var(--sidebar-bg);
 }
 
-.notification-actions .delete-btn i:hover {
-  color: #ffffff8c;
+::-webkit-scrollbar-thumb {
+  background: var(--active-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-principal);
 }
