@@ -38,10 +38,39 @@ app-menu {
 
 /* Header vacaciones */
 .header-vacaciones {
-  background: linear-gradient(90deg, var(--color-principal), var(--active-color));
-  padding: 10px 20px;
-  margin-top: 60px;
-  color: var(--text-hover);
+  background: linear-gradient(
+    90deg,
+    var(--color-principal),
+    var(--active-color)
+  );
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    color: var(--text-hover);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .btn {
+    background: var(--text-hover);
+    color: var(--color-principal);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-1px);
+    }
+  }
 }
 
 /* Botón Agregar */
@@ -191,15 +220,15 @@ app-menu {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.table-sm th, .table-sm td {
+.table-sm th,
+.table-sm td {
   padding: 6px 10px;
 }
 
-@media (min-width: 993px),(max-width: 1200px) {
+@media (min-width: 993px), (max-width: 1200px) {
   .contenido-principal {
     margin-left: 20%; /* Deja más espacio si se reduce el tamaño */
   }
-
 
   .contenido-principal {
     padding: 5px;
@@ -209,17 +238,15 @@ app-menu {
   .card {
     margin-bottom: 20px; /* Agrega un espacio entre las cards */
   }
-
 }
 
-@media (min-width: 769px),(max-width: 992px) {
+@media (min-width: 769px), (max-width: 992px) {
   .layout {
     display: flex;
     flex-direction: row;
     height: 100vh; /* Usa toda la altura de la pantalla */
     flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
   }
-
 
   .contenido-principal {
     padding: 5px;
@@ -233,15 +260,16 @@ app-menu {
   .header-vacaciones {
     padding: 10px;
   }
-
 }
 
 @media (max-width: 768px) {
-  .table th, .table td {
+  .table th,
+  .table td {
     padding: 10px;
   }
 
-  .table-sm th, .table-sm td {
+  .table-sm th,
+  .table-sm td {
     padding: 6px;
   }
 
@@ -273,7 +301,8 @@ app-menu {
     margin: 10px;
   }
 
-  .table th, .table td {
+  .table th,
+  .table td {
     font-size: 0.8rem;
     padding: 8px;
   }

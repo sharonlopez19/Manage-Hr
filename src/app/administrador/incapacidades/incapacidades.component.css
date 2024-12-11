@@ -39,9 +39,34 @@ app-menu {
 /* Header vacaciones */
 .header-vacaciones {
   background: linear-gradient(90deg, var(--color-principal), var(--active-color));
-  padding: 10px 20px;
-  margin-top: 60px;
-  color: var(--text-hover);
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    color: var(--text-hover);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .btn {
+    background: var(--text-hover);
+    color: var(--color-principal);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-1px);
+    }
+  }
 }
 
 /* Botón Agregar */

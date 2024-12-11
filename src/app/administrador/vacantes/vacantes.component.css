@@ -1,377 +1,328 @@
-/* Estilo para el contenedor de la lista de vacantes */
-#vacante-lista {
-    width: 70%; /* Asegura que la lista ocupe el 70% */
-    padding-right: 20px; /* Espaciado a la derecha */
-    overflow-y: auto; /* Barra de desplazamiento a la derecha */
-    background-color: #f9f9f9;
-    height: 100vh; /* Asegura que la lista ocupe toda la altura disponible */
-    margin-right: 0; /* Elimina margen que podría empujar la barra de desplazamiento */
-}
-
-
-.vacante {
+/* Layout principal */
+.layout {
     display: flex;
+    min-height: 100vh;
+    background-color: #202940;
+  }
+  
+  .contenido-principal {
+    flex: 1;
+    margin-left: 240px;
+    padding: 20px;
+  }
+  
+  app-menu {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 16%;
+    height: 100%;
+    z-index: 100;
+  }
+
+  /* Header */
+  .header-horas {
+    background: linear-gradient(90deg, var(--color-principal), var(--active-color));
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  
+    h3 {
+      color: var(--text-hover);
+      margin: 0;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  
+    .agregar-btn {
+      background: var(--text-hover);
+      color: var(--color-principal);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-1px);
+      }
+  
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  /* Lista de Vacantes */
+  .vacantes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .vacante-item {
+    background: var(--sidebar-bg);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px; /* Espaciado entre vacantes */
-    padding: 15px; /* Espaciado interno */
-    border: 1px solid white; /* Borde inicial blanco para todas las direcciones */
-    border-radius: 10px; /* Bordes redondeados */
-    background-color: #181a22; /* Fondo de cada vacante */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animación de borde */
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background: var(--active-bg);
+      transform: translateY(-2px);
+    }
+  }
+  
+  .vacante-avatar {
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid var(--active-color);
+    }
+  }
+  
+  .vacante-info {
+    h5 {
+      color: var(--text-hover);
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  
+    p {
+      color: var(--active-color);
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  
+  .vacante-actions {
+    display: flex;
+    gap: 10px;
+  
+    .action-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-color);
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+  
+      &:hover {
+        background: var(--active-bg);
+        
+        &.view {
+          color: var(--active-color);
+        }
+        
+        &.delete {
+          color: #dc3545;
+        }
+      }
+  
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  /* Panel de Detalles */
+  .detalles-panel {
+    background: var(--sidebar-bg);
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
+  
+    .detalles-title {
+      color: var(--text-hover);
+      font-size: 20px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+    }
+  
+    .detalles-section {
+      margin-top: 20px;
+  
+      .section-title {
+        color: var(--active-color);
+        font-size: 16px;
+        margin-bottom: 10px;
+        background: rgba(59, 130, 246, 0.1);
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    p {
+      color: var(--text-color);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .salary {
+      color: var(--active-color);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .requirements-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: var(--text-color);
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 14px;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }
 
-/* Estilo cuando el ratón está encima de la vacante */
-.vacante:hover {
-    border-color: #007bff; /* Borde azul al pasar el ratón */
+/* Modal Styles */
+.modal-content {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+
+  .modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 20px;
+
+    .modal-title {
+      color: var(--text-hover);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+  }
+
+  .modal-body {
+    padding: 20px;
+
+    .form-label {
+      color: var(--text-hover);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-hover);
+      padding: 10px;
+
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: var(--active-color);
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    textarea.form-control {
+      min-height: 100px;
+    }
+  }
+
+  .modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 15px 20px;
+
+    .btn {
+      padding: 8px 20px;
+      font-size: 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: var(--text-hover);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .btn-primary {
+      background-color: var(--active-color);
+      border: none;
+
+      &:hover {
+        background-color: var(--color-principal);
+      }
+    }
+  }
 }
 
-/* Estilo cuando la vacante está enfocada (al hacer clic) */
-.vacante:focus {
-    border-color: #007bff; /* Borde azul al hacer clic */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra azul */
-    outline: none; /* Quita el borde por defecto de focus */
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contenido-principal {
+    margin-left: 70px;
+    padding: 15px;
+  }
 
-/* Asegura que el borde inferior también se cambie al azul al enfocarse */
-.vacante:focus, .vacante:hover {
-    border-top: 1px solid #007bff;    /* Asegura que el borde superior también sea azul */
-    border-right: 1px solid #007bff;  /* Borde derecho también azul */
-    border-bottom: 1px solid #007bff; /* Borde inferior también azul */
-    border-left: 1px solid #007bff;   /* Borde izquierdo también azul */
-}
+  .vacante-item {
+    padding: 12px;
+  }
 
-
-/* Estilo para la foto de la vacante */
-.vacante-foto img {
+  .vacante-avatar img {
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Foto redonda */
-    object-fit: cover;
-    border: 2px solid #ccc;
-}
+  }
 
-/* Estilo para la información de la vacante */
-.vacante-info {
-    margin-left: 15px; /* Espacio entre la foto y la información */
-    color: rgb(250, 240, 240); 
-}
+  .vacante-info {
+    h5 {
+      font-size: 16px;
+    }
 
-/* Estilo para el nombre de la vacante */
-.vacante-nombre {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ced128;
-    margin: 0;
-}
+    p {
+      font-size: 14px;
+    }
+  }
 
-/* Estilo para el salario de la vacante */
-.vacante-salario {
-    font-size: 16px;
-    color: #28a745;
-    margin: 5px 0 0 0;
-}
-
-
-
-/* Estilo para el título de los detalles */
-.detalles-titulo {
-    font-size: 26px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 10px;
-    background-color: #0edd5300;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 6px;
+  .detalles-panel {
+    margin-top: 20px;
     padding: 15px;
 
-    font-style: oblique;
-    
-}
-
-/* Estilo para la descripción de los detalles */
-.detalles-descripcion {
-    font-size: 16px;
-    color: #21ce1100;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Contenedor de la lista de vacantes */
-.container-fluid {
-    display: flex;
-    height: 100vh; /* Altura completa de la pantalla */
-    padding: 0;
-    margin-top: 0%;
-    width: 95%;
-}
-
-/* Sidebar */
-app-menu {
-    position: fixed; /* Fija el sidebar en el lado izquierdo */
-    width: 15%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    color: #fff;
-}
-
-
-
-
-    .titulo {
-        width: 80%; /* Ancho del contenedor */
-        background-color: var(--color-principal); /* Fondo del contenedor */
-        color: white; /* Color del texto */
-        text-align: center; /* Texto centrado */
-        justify-content: center; /* Centrado de contenido (para Flexbox) */
-        align-items: center; /* Centrado de contenido (para Flexbox) */
-        padding: 10px 0; /* Espaciado superior e inferior */
-        font-size: 1.5rem; /* Tamaño del texto */
-        font-weight: bold; /* Texto en negrita */
-        position: relative; /* Posición relativa para ajustes */
-        margin-top: 2%; /* Margen superior */
-        height: 6%; /* Altura del contenedor */
-        border-radius: 12px 12px 0 0; 
-        margin-left: 15%;
-      
+    .detalles-title {
+      font-size: 18px;
     }
-        
 
-
-/* Contenedor principal de las vacantes */
-.contenido-principal {
-    margin-left: 13%; /* Deja espacio para el sidebar */
-    width: 85%; /* El contenido ocupa el 85% */
-    padding: 20px;
-    display: flex;
-    flex-direction: row; /* Para que la lista y detalles estén lado a lado */
-    justify-content: space-between;
-    margin-top: 2%;
-    
+    .section-title {
+      font-size: 15px;
+    }
+  }
 }
 
-/* Ajustes en la lista de vacantes */
-.lista-vacantes {
-    width: 70%; /* Toma el 70% del contenedor principal */
-    padding-right: 20px;
-    overflow-y: auto; /* Permite la barra de desplazamiento en la parte derecha */
-    max-height: 100vh; /* Limita la altura para que no se desborde */
-    margin-right: 10px; /* Alinea bien la lista con un pequeño margen a la derecha */
-    
-}
-
-
-/* Detalles de la vacante */
-.detalles-vacante {
-    width: 30%; /* Toma el 30% del contenedor principal */
-    padding: 20px;
-    border: 1px solid #ffffff;
-    background: var(--sidebar-bg);
-    border-radius: 10px;
-    height: 87vh;
-}
-
-.detalles-vacante li{
-    background-color: #121a2400;
-    color: var( --text-hover);
-    padding: 0px;
-    border-radius: 5px;
-    margin: 10px;
-    
-    
-    
-}
-
-.detalles-vacante p{
-    color: #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-    background-color: #121a2400;
-}
-
-.detalles-vacante h4{
-    background-color: var(--color-principal);
-    color: #cfd0da;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 13px;
-    font-size: 18px;
-}
-
-/* Aseguramos que la caja de detalles se mantenga fija en la página */
-.detalles-vacante-fixed {
-    position: fixed;
-    top: 10%;
-    right: 0;
-    width: 25%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-
-.vacante-foto img {
-    width: 70px; /* Cambié el tamaño de la imagen a 80px */
-    height: 70px; /* Ajusté la altura para mantener la proporción */
-    border-radius: 50%; /* Foto redonda */
-    object-fit: cover;
-    border: 1px solid #ffffff;
-    margin-left: 10px;
-}
-
-/* Estilo para los íconos de acciones */
-.acciones {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 15px;
-    
-    
-}
-
-.acciones i {
-    font-size: 25px; /* Tamaño del ícono */
-    cursor: pointer; /* Cambia el cursor para indicar interactividad */
-
-    
-}
-
-
-
-
-
-/* Webkit Browsers */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 12px;
-    background-color: #f0f0f000;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #007bff00, #42a4f500);
-    border-radius: 6px;
-    border: 2px solid #f0f0f000;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #e0e0e000;
-    border-radius: 6px;
-  }
-  
-  /* Firefox */
-  html {
-    scrollbar-color: #007bff00 #f0f0f000;
-    scrollbar-width: thin;
-  }
-  
-  
-
-  .btn-link {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .btn-link:focus {
-    outline: none;
-  }
-
-  .modal-dialog {
-    margin-top: 100px; /* Ajusta el valor para bajar o subir el modal */
-    
+  width: 8px;
 }
 
-
-/* Estilo del botón de agregar vacante */
-.btn-success {
-    background-color: var( --active-color);
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 50%;
-    padding: 10px 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+::-webkit-scrollbar-track {
+  background: var(--sidebar-bg);
 }
 
-.btn-success:hover {
-    background-color: rgb(73, 113, 245);
+::-webkit-scrollbar-thumb {
+  background: var(--active-color);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--color-principal);
+  }
 }
-
-
-@media (max-width: 768px) {
-    .detalles-vacante {
-        padding: 15px;
-        margin: 10px;
-
-        p{
-            font-size: 10px;
-    
-        }
-    
-        h5{
-            font-size: 10px;
-           
-        }
-
-        h4{
-            font-size: 10px;
-            
-        }
-
-        h2{
-            font-size: 15px;
-            
-        }
-
-       
-
-
-    }
-
-    .agregar-vacante-btn {
-        bottom: 15px;
-        right: 15px;
-        font-size: 16px;
-        padding: 8px 12px;
-    }
-
-    .btn-success {
-        margin-top: 5px;
-    }
-
-    p{
-        font-size: 10px;
-
-    }
-
-    h5{
-        font-size: 10px;
-    }
-
-    .titulo-container {
-        width: 100%; /* Ancho del contenedor */
-        background-color: var(--color-principal); /* Fondo del contenedor */
-        color: white; /* Color del texto */
-        text-align: center; /* Texto centrado */
-        justify-content: center; /* Centrado de contenido (para Flexbox) */
-        align-items: center; /* Centrado de contenido (para Flexbox) */
-        padding: 10px 0; /* Espaciado superior e inferior */
-        font-size: 1.5rem; /* Tamaño del texto */
-        font-weight: bold; /* Texto en negrita */
-        position: relative; /* Posición relativa para ajustes */
-        margin-top: 2%; /* Margen superior */
-        height: 6%; /* Altura del contenedor */
-        border-radius: 12px 12px 0 0; 
-      }
-      
-        
-}
-
-
-
-

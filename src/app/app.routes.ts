@@ -16,7 +16,7 @@ export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   // { path: 'menu', component: MenuComponent },
-  { path: 'inicio', component: InicioComponent },
+  // { path: 'inicio', component: DirectorioComponent },
   { path: 'directorio', component: DirectorioComponent },
   { path: 'vacantes', component: VacantesComponent },
   { path: 'vacaciones', component: VacacionesComponent },

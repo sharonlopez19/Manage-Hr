@@ -25,7 +25,7 @@ export class LoginComponent {
   onLogin() {
     // Para debuggear, puedes agregar un console.log
     console.log('Navegando a inicio...');
-    this.router.navigate(['/inicio'])
+    this.router.navigate(['/directorio'])
       .then(() => console.log('Navegación exitosa'))
       .catch(err => console.error('Error en navegación:', err));
   }

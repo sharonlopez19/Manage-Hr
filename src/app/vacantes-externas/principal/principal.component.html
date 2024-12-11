@@ -1,372 +1,253 @@
-<div class="titulo">Vacantes</div>
-
 <div class="layout">
-<div class="container-fluid">
-    <!-- Contenido principal (85%) -->
     <div class="contenido-principal">
-       
-        <div class="lista-vacantes">
-            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
-                <div class="d-flex align-items-center">
-                    <div class="vacante-foto me-3">
-                        <img src="https://victorroblesweb.es/wp-content/uploads/2017/04/angular4.png"
-                            alt="Desarrollador Frontend" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="vacante-info">
-                        <h5>Desarrollador Frontend Angular</h5>
-                        <p>$8,000,000 COP</p>
-                    </div>
-                </div>
-                <!-- Íconos de editar y eliminar -->
-                <div class="acciones">
-                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
-                        <i class="fas fa-edit text-primary"></i>
-                    </button>
-                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                        <i class="fas fa-trash-alt text-danger"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
-                <div class="d-flex align-items-center">
-                    <div class="vacante-foto me-3">
-                        <img src="https://www.adm.ee/wordpress/wp-content/uploads/2023/08/JAVA.png" alt="Desarrollador Backend"
-                            class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="vacante-info">
-                        <h5>Desarrollador Backend Java</h5>
-                        <p>$7,000,000 COP</p>
-                    </div>
-                </div>
-                <div class="acciones">
-                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
-                        <i class="fas fa-edit text-primary"></i>
-                    </button>
-                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                        <i class="fas fa-trash-alt text-danger"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
-                <div class="d-flex align-items-center">
-                    <div class="vacante-foto me-3">
-                        <img src="https://weareshifta.com/wp-content/uploads/diseno-ux-1.jpg" alt="Diseñador UX/UI"
-                            class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="vacante-info">
-                        <h5>Diseñador UX/UI</h5>
-                        <p>$5,500,000 COP</p>
-                    </div>
-                </div>
-                <div class="acciones">
-                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
-                        <i class="fas fa-edit text-primary"></i>
-                    </button>
-                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                        <i class="fas fa-trash-alt text-danger"></i>
-                    </button>
-                </div>
-            </div>
-
-            
-
-            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
-                <div class="d-flex align-items-center">
-                    <div class="vacante-foto me-3">
-                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2021/02/architect-working-on-blueprint-with-team-picture-id1189899412.jpg"
-                            alt="Gerente de Proyecto" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="vacante-info">
-                        <h5>Gerente de Proyecto</h5>
-                        <p>$10,000,000 COP</p>
-                    </div>
-                </div>
-                <div class="acciones">
-                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
-                        <i class="fas fa-edit text-primary"></i>
-                    </button>
-                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                        <i class="fas fa-trash-alt text-danger"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
-                <div class="d-flex align-items-center">
-                    <div class="vacante-foto me-3">
-                        <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2022/03/handsome-smiling-it-specialist-using-laptop-computer-in-data-center-picture-id1336250788.jpg"
-                            alt="Científico de Datos" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="vacante-info">
-                        <h5>Científico de Datos</h5>
-                        <p>$9,500,000 COP</p>
-                    </div>
-                </div>
-                <div class="acciones">
-                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
-                        <i class="fas fa-edit text-primary"></i>
-                    </button>
-                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                        <i class="fas fa-trash-alt text-danger"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
-                <div class="d-flex align-items-center">
-                    <div class="vacante-foto me-3">
-                        <img src="https://www.unir.net/wp-content/uploads/sites/22/2021/06/beautiful-male-computer-engineer-and-scientists-create-neural-network-picture-id1182697690.jpg"
-                            alt="Administrador de Sistemas" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="vacante-info">
-                        <h5>Administrador de Sistemas</h5>
-                        <p>$6,500,000 COP</p>
-                    </div>
-                </div>
-                <div class="acciones">
-                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
-                        <i class="fas fa-edit text-primary"></i>
-                    </button>
-                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                        <i class="fas fa-trash-alt text-danger"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="vacante mb-3 d-flex justify-content-between align-items-center border-bottom pb-3" tabindex="0">
-                <div class="d-flex align-items-center">
-                    <div class="vacante-foto me-3">
-                        <img src="https://www.itcsystem.es/wp-content/uploads/2022/07/tecnico-sistemas-informaticos.png"
-                            alt="Tecnico de Sistemas" class="img-fluid rounded-circle" />
-                    </div>
-                    <div class="vacante-info">
-                        <h5>Tecnico de Sistemas</h5>
-                        <p>$4,600,000 COP</p>
-                    </div>
-                </div>
-                <div class="acciones">
-                    <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#editarVacanteModal" title="Editar">
-                        <i class="fas fa-edit text-primary"></i>
-                    </button>
-                    <button class="btn btn-link" (click)="confirmDelete()" title="Eliminar">
-                        <i class="fas fa-trash-alt text-danger"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="header-horas d-flex justify-content-between align-items-center">
+            <h3>Vacantes</h3>
         </div>
 
-        <!-- Detalles de la vacante (30%) -->
-        <!-- Contenedor de los detalles de la vacante -->
-<div class="detalles-vacante">
-    <h2 class="detalles-titulo">Desarrollador Frontend Angular</h2>
-    <p class="detalles-descripcion">
-        Descripción de la vacante, requisitos y otros detalles importantes. Esta vacante está orientada a desarrolladores frontend que tengan experiencia en tecnologías web modernas.
-    </p>
-    <h4>Salario:</h4>
-    <p class="vacante-salario">$8.000.000 COP</p>
-    <h4>Ubicación:</h4>
-    <p>Remoto</p>
-    <h4>Requisitos:</h4>
-    <ul>
-        <li><p>Experiencia en Angular y React</p></li>
-        <li><p>Conocimientos en HTML5, CSS3, y JavaScript</p></li>
-        <li><p>Habilidad para trabajar en equipo</p></li>
-    </ul>
-    
-    <div class="boton-postularme">
-        <button type="button" class="btn btn-postularme" data-bs-toggle="modal" data-bs-target="#postulacionModal">
-          Postularme
-        </button>
-      </div>
-    
-</div>
+        <div class="row">
+            <!-- Lista de Vacantes -->
+            <div class="col-lg-8 col-md-12 pe-lg-4">
+                <div class="vacantes-list">
+                    <!-- Vacante 1 -->
+                    <div class="vacante-item">
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="vacante-avatar me-3">
+                                <img src="https://victorroblesweb.es/wp-content/uploads/2017/04/angular4.png"
+                                    alt="Angular Developer" class="rounded-circle">
+                            </div>
+                            <div class="vacante-info">
+                                <h5 class="mb-1">Desarrollador Frontend Angular</h5>
+                                <p class="mb-0">$8,000,000 COP</p>
+                            </div>
+                        </div>
 
-<!-- Modal para agregar una nueva vacante -->
-<div class="modal fade" id="agregarVacanteModal" tabindex="-1" aria-labelledby="agregarVacanteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="agregarVacanteModalLabel">Agregar Nueva Vacante</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Vacante 2 -->
+                    <div class="vacante-item">
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="vacante-avatar me-3">
+                                <img src="https://www.adm.ee/wordpress/wp-content/uploads/2023/08/JAVA.png"
+                                    alt="Java Developer" class="rounded-circle">
+                            </div>
+                            <div class="vacante-info">
+                                <h5 class="mb-1">Desarrollador Backend Java</h5>
+                                <p class="mb-0">$7,000,000 COP</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Vacante 3 -->
+                    <div class="vacante-item">
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="vacante-avatar me-3">
+                                <img src="https://weareshifta.com/wp-content/uploads/diseno-ux-1.jpg" alt="UX Designer"
+                                    class="rounded-circle">
+                            </div>
+                            <div class="vacante-info">
+                                <h5 class="mb-1">Diseñador UX/UI</h5>
+                                <p class="mb-0">$5,500,000 COP</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Vacante 4 -->
+                    <div class="vacante-item">
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="vacante-avatar me-3">
+                                <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2021/02/architect-working-on-blueprint-with-team-picture-id1189899412.jpg"
+                                    alt="Project Manager" class="rounded-circle">
+                            </div>
+                            <div class="vacante-info">
+                                <h5 class="mb-1">Gerente de Proyecto</h5>
+                                <p class="mb-0">$10,000,000 COP</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Vacante 5 -->
+                    <div class="vacante-item">
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="vacante-avatar me-3">
+                                <img src="https://www.unir.net/wp-content/uploads/sites/22/2021/06/beautiful-male-computer-engineer-and-scientists-create-neural-network-picture-id1182697690.jpg"
+                                    alt="System Administrator" class="rounded-circle">
+                            </div>
+                            <div class="vacante-info">
+                                <h5 class="mb-1">Administrador de Sistemas</h5>
+                                <p class="mb-0">$6,500,000 COP</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="vacante-item">
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="vacante-avatar me-3">
+                                <img src="https://www.pngitem.com/pimgs/m/116-1167737_logo-javascript-pattern-copyright-framework-free-download-javascript.png"
+                                    alt="JavaScript Developer" class="rounded-circle">
+                            </div>
+                            <div class="vacante-info">
+                                <h5 class="mb-1">Desarrollador Frontend JavaScript</h5>
+                                <p class="mb-0">$6,000,000 COP</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="vacante-item">
+                        <div class="d-flex align-items-center flex-grow-1">
+                            <div class="vacante-avatar me-3">
+                                <img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Python Developer"
+                                    class="rounded-circle">
+                            </div>
+                            <div class="vacante-info">
+                                <h5 class="mb-1">Desarrollador Backend Python</h5>
+                                <p class="mb-0">$8,000,000 COP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="vacante-titulo" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="vacante-titulo" placeholder="Ej. Desarrollador Frontend">
+
+
+
+            <!-- Panel de Detalles -->
+            <div class="col-lg-4 col-md-12">
+                <div class="detalles-panel">
+                    <h4 class="detalles-title text-center mb-4">Desarrollador Frontend Angular</h4>
+
+                    <div class="detalles-section">
+                        <h5 class="section-title">Descripción</h5>
+                        <p>Buscamos un desarrollador Frontend con sólida experiencia en Angular para unirse a nuestro
+                            equipo de desarrollo. El candidato ideal debe tener pasión por crear interfaces de usuario
+                            excepcionales y mantener altos estándares de calidad en el código.</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="vacante-salario" class="form-label">Salario</label>
-                        <input type="text" class="form-control" id="vacante-salario" placeholder="Ej. $8,000,000 COP">
+
+                    <div class="detalles-section">
+                        <h5 class="section-title">Salario</h5>
+                        <p class="salary">$8,000,000 COP</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="vacante-descripcion" class="form-label">Descripción</label>
-                        <textarea class="form-control" id="vacante-descripcion" placeholder="Detalles de la vacante"></textarea>
+
+                    <div class="detalles-section">
+                        <h5 class="section-title">Requisitos</h5>
+                        <ul class="requirements-list">
+                            <li>3+ años de experiencia con Angular</li>
+                            <li>Sólidos conocimientos en HTML5, CSS3 y JavaScript</li>
+                            <li>Experiencia con control de versiones Git</li>
+                            <li>Capacidad para trabajar en equipo</li>
+                            <li>Inglés intermedio-avanzado</li>
+                        </ul>
                     </div>
-                    <div class="mb-3">
-                        <label for="vacante-requisitos" class="form-label">Requisitos</label>
-                        <textarea class="form-control" id="vacante-requisitos" placeholder="Requisitos de la vacante"></textarea>
+                    <div class="boton-postularme ">
+                        <button type="button" class="btn btn-postularme" data-bs-toggle="modal"
+                            data-bs-target="#postulacionModal">
+                            Postularme
+                        </button>
                     </div>
-                    <div class="mb-3">
-                        <label for="vacante-ubicacion" class="form-label">Ubicación</label>
-                        <input type="text" class="form-control" id="vacante-ubicacion" placeholder="Ubicación de la vacante">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Agregar Vacante</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-    </div>
-</div>
-
-  
-    <!-- Botón Postularme -->
-
-  
-  <!-- Modal de Postulación -->
-  <div class="modal fade" id="postulacionModal" tabindex="-1" aria-labelledby="postulacionModalLabel" aria-hidden="true">
+<!-- Modal de Postulación -->
+<div class="modal fade" id="postulacionModal" tabindex="-1" aria-labelledby="postulacionModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="postulacionModalLabel">Formulario de Postulación</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Formulario -->
-          <form>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label for="nombres" class="form-label">Nombres completos</label>
-                  <input type="text" class="form-control" id="nombres" placeholder="Nombres completos">
-                </div>
-                <div class="mb-3">
-                  <label for="apellidos" class="form-label">Apellidos completos</label>
-                  <input type="text" class="form-control" id="apellidos" placeholder="Apellidos completos">
-                </div>
-                <div class="mb-3">
-                  <label for="tipoDocumento" class="form-label">Tipo de documento</label>
-                  <select class="form-select" id="tipoDocumento">
-                    <option selected>Seleccione una opción</option>
-                    <option value="CC">Cédula de ciudadanía</option>
-                    <option value="TI">Tarjeta de identidad</option>
-                    <option value="CE">Cédula de extranjeria</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="numeroDocumento" class="form-label">Número de documento</label>
-                  <input type="text" class="form-control" id="numeroDocumento" placeholder="Número de documento">
-                </div>
-                <div class="mb-3">
-                  <label for="direccion" class="form-label">Dirección de residencia</label>
-                  <input type="text" class="form-control" id="direccion" placeholder="Dirección de residencia">
-                </div>
-                <div class="mb-3">
-                  <label for="telefono" class="form-label">Número de teléfono celular</label>
-                  <input type="text" class="form-control" id="telefono" placeholder="Número de teléfono celular">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label for="tipoSangre" class="form-label">Tipo de sangre</label>
-                  <select class="form-select" id="tipoSangre">
-                    <option selected>Seleccione una opción</option>
-                    <option value="A+">A+</option>
-                    <option value="O+">O+</option>
-                    <option value="A-">A-</option>
-                    <option value="O-">O-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="edad" class="form-label">Edad</label>
-                  <input type="number" class="form-control" id="edad" placeholder="Edad actual en números">
-                </div>
-                <div class="mb-3">
-                  <label for="estadoCivil" class="form-label">Estado Civil</label>
-                  <select class="form-select" id="estadoCivil">
-                    <option selected>Seleccione una opción</option>
-                    <option value="Soltero">Soltero</option>
-                    <option value="Casado">Casado</option>
-                    <option value="Divorciado">Divorciado</option>
-                    <option value="Unión Libre">Unión Libre</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="estudios" class="form-label">Estudios</label>
-                  <input type="text" class="form-control" id="estudios" placeholder="Número de documento">
-                </div>
-                <div class="mb-3">
-                  <label for="referenciaLaboral" class="form-label">Referencia Laboral</label>
-                  <input type="text" class="form-control" id="referenciaLaboral" placeholder="Referencia Laboral">
-                </div>
-                <div class="mb-3">
-                  <label for="certificado" class="form-label">Certificado de referencia laboral</label>
-                  <input type="file" class="form-control" id="certificado">
-                </div>
-              </div>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-success">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-<!-- Modal de Edición -->
-<div class="modal fade" id="editarVacanteModal" tabindex="-1" aria-labelledby="editarVacanteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editarVacanteModalLabel">Editar Vacante</h5>
+                <h5 class="modal-title" id="postulacionModalLabel">Formulario de Postulación</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <!-- Formulario -->
                 <form>
-                    <div class="mb-3">
-                        <label for="vacante-titulo" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="vacante-titulo" value="Desarrollador Frontend Angular">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="nombres" class="form-label">Nombres completos</label>
+                                <input type="text" class="form-control" id="nombres" placeholder="Nombres completos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidos" class="form-label">Apellidos completos</label>
+                                <input type="text" class="form-control" id="apellidos"
+                                    placeholder="Apellidos completos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipoDocumento" class="form-label">Tipo de documento</label>
+                                <select class="form-select" id="tipoDocumento">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="CC">Cédula de ciudadanía</option>
+                                    <option value="TI">Tarjeta de identidad</option>
+                                    <option value="CE">Cédula de extranjeria</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="numeroDocumento" class="form-label">Número de documento</label>
+                                <input type="text" class="form-control" id="numeroDocumento"
+                                    placeholder="Número de documento">
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccion" class="form-label">Dirección de residencia</label>
+                                <input type="text" class="form-control" id="direccion"
+                                    placeholder="Dirección de residencia">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Número de teléfono celular</label>
+                                <input type="text" class="form-control" id="telefono"
+                                    placeholder="Número de teléfono celular">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="tipoSangre" class="form-label">Tipo de sangre</label>
+                                <select class="form-select" id="tipoSangre">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="A+">A+</option>
+                                    <option value="O+">O+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="O-">O-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="edad" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="edad"
+                                    placeholder="Edad actual en números">
+                            </div>
+                            <div class="mb-3">
+                                <label for="estadoCivil" class="form-label">Estado Civil</label>
+                                <select class="form-select" id="estadoCivil">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="Soltero">Soltero</option>
+                                    <option value="Casado">Casado</option>
+                                    <option value="Divorciado">Divorciado</option>
+                                    <option value="Unión Libre">Unión Libre</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="estudios" class="form-label">Estudios</label>
+                                <input type="text" class="form-control" id="estudios" placeholder="Número de documento">
+                            </div>
+                            <div class="mb-3">
+                                <label for="referenciaLaboral" class="form-label">Referencia Laboral</label>
+                                <input type="text" class="form-control" id="referenciaLaboral"
+                                    placeholder="Referencia Laboral">
+                            </div>
+                            <div class="mb-3">
+                                <label for="certificado" class="form-label">Certificado de referencia laboral</label>
+                                <input type="file" class="form-control" id="certificado">
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="vacante-salario" class="form-label">Salario</label>
-                        <input type="text" class="form-control" id="vacante-salario" value="$8,000,000 COP">
-                    </div>
-                    <div class="mb-3">
-                        <label for="vacante-descripcion" class="form-label">Descripción</label>
-                        <textarea class="form-control" id="vacante-descripcion">Descripción de la vacante, requisitos y otros detalles importantes.</textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="vacante-requisitos" class="form-label">Requisitos</label>
-                        <textarea class="form-control" id="vacante-requisitos">Experiencia en Angular y React, conocimientos en HTML5, CSS3, y JavaScript.</textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="vacante-ubicacion" class="form-label">Ubicación</label>
-                        <input type="text" class="form-control" id="vacante-ubicacion" value="Remoto">
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Enviar</button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Guardar cambios</button>
             </div>
         </div>
     </div>
 </div>
-</div>
-
-<!-- Scripts necesarios para Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
