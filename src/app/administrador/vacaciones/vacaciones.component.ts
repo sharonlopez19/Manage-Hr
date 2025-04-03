@@ -57,8 +57,8 @@ export class VacacionesComponent {
         </div>
       `,
       showCancelButton: true,
-      confirmButtonText: 'Guardar Cambios',
-      cancelButtonText: 'Cancelar',
+      // confirmButtonText: 'Guardar Cambios',
+      // cancelButtonText: 'Cancelar',                      Agregar Botones al formulario
       preConfirm: () => {
         const nombre = (document.getElementById('nombre') as HTMLInputElement).value;
         const cargo = (document.getElementById('cargo') as HTMLInputElement).value;
