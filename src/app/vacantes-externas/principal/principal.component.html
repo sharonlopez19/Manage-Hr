@@ -165,11 +165,29 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="nombres" class="form-label">Nombres completos</label>
+                                <label for="nombres" class="form-label">Primer Nombre</label>
                                 <input type="text" class="form-control" id="nombres" placeholder="Nombres completos">
                             </div>
                             <div class="mb-3">
-                                <label for="apellidos" class="form-label">Apellidos completos</label>
+                                <label for="nombres" class="form-label">Segundo Nombre</label>
+                                <input type="text" class="form-control" id="nombres" placeholder="Nombres completos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidos" class="form-label">Primer Apellido</label>
+                                <input type="text" class="form-control" id="apellidos"
+                                    placeholder="Apellidos completos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipoDocumento" class="form-label">Genero</label>
+                                <select class="form-select" id="tipoDocumento">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidos" class="form-label">Segundo Apellido</label>
                                 <input type="text" class="form-control" id="apellidos"
                                     placeholder="Apellidos completos">
                             </div>
@@ -188,9 +206,31 @@
                                     placeholder="Número de documento">
                             </div>
                             <div class="mb-3">
+                                <label for="nombres" class="form-label">Número de hijos</label>
+                                <input type="number" class="form-control" id="nombres" placeholder="Número de hijos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombres" class="form-label">Correo Electronico</label>
+                                <input type="email" class="form-control" id="nombres" placeholder="Correo Electronico">
+                            </div>
+                            <div class="mb-3">
                                 <label for="direccion" class="form-label">Dirección de residencia</label>
                                 <input type="text" class="form-control" id="direccion"
                                     placeholder="Dirección de residencia">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipoSangre" class="form-label">Tipo de sangre</label>
+                                <select class="form-select" id="tipoSangre">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="A+">A+</option>
+                                    <option value="O+">O+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="O-">O-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="telefono" class="form-label">Número de teléfono celular</label>
@@ -214,32 +254,51 @@
                                 </select>
                             </div>
                             <div class="mb-3">
+                                <label for="edad" class="form-label">Fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="edad"
+                                    placeholder="Fecha de nacimiento">
+                            </div>
+                            <div class="mb-3">
                                 <label for="edad" class="form-label">Edad</label>
                                 <input type="number" class="form-control" id="edad"
                                     placeholder="Edad actual en números">
                             </div>
-                            <div class="mb-3">
-                                <label for="estadoCivil" class="form-label">Estado Civil</label>
-                                <select class="form-select" id="estadoCivil">
-                                    <option selected>Seleccione una opción</option>
-                                    <option value="Soltero">Soltero</option>
-                                    <option value="Casado">Casado</option>
-                                    <option value="Divorciado">Divorciado</option>
-                                    <option value="Unión Libre">Unión Libre</option>
-                                </select>
-                            </div>
+                
                             <div class="mb-3">
                                 <label for="estudios" class="form-label">Estudios</label>
                                 <input type="text" class="form-control" id="estudios" placeholder="Número de documento">
                             </div>
                             <div class="mb-3">
-                                <label for="referenciaLaboral" class="form-label">Referencia Laboral</label>
-                                <input type="text" class="form-control" id="referenciaLaboral"
-                                    placeholder="Referencia Laboral">
+                                <label for="certificado" class="form-label">Hoja de vida</label>
+                                <input type="file" class="form-control" id="certificado">
                             </div>
                             <div class="mb-3">
                                 <label for="certificado" class="form-label">Certificado de referencia laboral</label>
                                 <input type="file" class="form-control" id="certificado">
+                            </div>
+                            <div class="mb-3">
+                                <label for="certificado" class="form-label">Nacionalidad</label>
+                                <input type="text" class="form-control" id="certificado">
+                            </div>
+                            <div class="mb-3">
+                                <label for="certificado" class="form-label">Codigo EPS</label>
+                                <input type="text" class="form-control" id="certificado">
+                            </div>
+                            <div class="mb-3">
+                                <label for="certificado" class="form-label">Codigo EPS</label>
+                                <input type="text" class="form-control" id="certificado">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombres" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="nombres" placeholder="Nombres completos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombres" class="form-label">Nombre Contacto de emergencia</label>
+                                <input type="text" class="form-control" id="nombres" placeholder="Nombres completos">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombres" class="form-label">Número Contacto de emergencia</label>
+                                <input type="phone" class="form-control" id="nombres" placeholder="Nombres completos">
                             </div>
                         </div>
                     </div>
